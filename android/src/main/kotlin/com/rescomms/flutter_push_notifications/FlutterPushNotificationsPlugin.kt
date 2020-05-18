@@ -77,9 +77,6 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                 call.arguments.let { FirebaseMessaging.getInstance().isAutoInitEnabled = it as Boolean }
                 result.success(null)
             }
-            "subscribeToTopic" -> subscribeToTopic(call.arguments as String, result)
-            "unsubscribeFromTopic" -> unsubscribeFromTopic(call.arguments as String, result)
-            "deleteInstanceID" -> deleteInstanceID(result)
             else -> result.notImplemented()
         }
     }
@@ -151,47 +148,6 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                 Intent(ACTION_NEW_FB_TOKEN).apply {
                     this.putExtra(EXTRA_TOKEN, it.token)
                     LocalBroadcastManager.getInstance(context).sendBroadcast(this)
-                }
-            }
-        }
-    }
-
-    private fun subscribeToTopic(topic: String, result: Result) {
-        FirebaseMessaging.getInstance().subscribeToTopic(topic).addOnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                task.exception?.let {
-                    result.error("subscribeToTopic", it.message, null)
-                }
-                return@addOnCompleteListener
-            }
-            result.success(null)
-        }
-    }
-
-    private fun unsubscribeFromTopic(topic: String, result: Result) {
-        FirebaseMessaging.getInstance().unsubscribeFromTopic(topic).addOnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                task.exception?.let {
-                    result.error("unsubscribeFromTopic", it.message, null)
-                }
-                return@addOnCompleteListener
-            }
-            result.success(null)
-        }
-    }
-
-    private fun deleteInstanceID(result: Result) {
-        try {
-            FirebaseInstanceId.getInstance().deleteInstanceId()
-            activity?.let {
-                it.runOnUiThread {
-                    result.success(true)
-                }
-            }
-        } catch (exception: IOException) {
-            activity?.let {
-                it.runOnUiThread {
-                    result.success(false)
                 }
             }
         }
