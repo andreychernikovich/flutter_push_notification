@@ -70,7 +70,7 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
 
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        when(call.method) {
+        when (call.method) {
             "getToken" -> getToken(result)
             "autoInitEnabled" -> result.success(FirebaseMessaging.getInstance().isAutoInitEnabled)
             "setAutoInitEnabled" -> {
@@ -103,6 +103,7 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                     this.data.toMutableMap().apply {
                         intent.extras?.let { put("pressAction", it[EXTRA_PRESS_ACTION] as String) }
                         channel.invokeMethod("onPushPress", this)
+                        notificationUtils.notificationManager.cancelAll()
                     }
                 }
                 true
@@ -146,7 +147,7 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                 return@addOnCompleteListener
             }
             task.result?.let {
-                result?.success( it.token )
+                result?.success(it.token)
                 Intent(ACTION_NEW_FB_TOKEN).apply {
                     this.putExtra(EXTRA_TOKEN, it.token)
                     LocalBroadcastManager.getInstance(context).sendBroadcast(this)
@@ -156,7 +157,7 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
     }
 
     private fun subscribeToTopic(topic: String, result: Result) {
-        FirebaseMessaging.getInstance().subscribeToTopic(topic).addOnCompleteListener { task->
+        FirebaseMessaging.getInstance().subscribeToTopic(topic).addOnCompleteListener { task ->
             if (!task.isSuccessful) {
                 task.exception?.let {
                     result.error("subscribeToTopic", it.message, null)
@@ -180,19 +181,19 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
     }
 
     private fun deleteInstanceID(result: Result) {
-            try {
-                FirebaseInstanceId.getInstance().deleteInstanceId()
-                activity?.let {
-                    it.runOnUiThread {
-                        result.success(true)
-                    }
-                }
-            } catch ( exception: IOException) {
-                activity?.let {
-                    it.runOnUiThread {
-                        result.success(false)
-                    }
+        try {
+            FirebaseInstanceId.getInstance().deleteInstanceId()
+            activity?.let {
+                it.runOnUiThread {
+                    result.success(true)
                 }
             }
+        } catch (exception: IOException) {
+            activity?.let {
+                it.runOnUiThread {
+                    result.success(false)
+                }
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
@@ -61,13 +62,13 @@ class NotificationUtils {
     }
 
     private fun createActions(builder: NotificationCompat.Builder, actions: String, message: RemoteMessage) {
-        Gson().fromJson(actions, Array<String>::class.java).map {
+        Gson().fromJson(actions, Array<String>::class.java).mapIndexed { index, remoteAction ->
             Intent(context, activity.javaClass).apply {
                 action = ACTION_PRESS_PUSH_BUTTON
                 putExtra(EXTRA_PUSH_DATA, message)
-                putExtra(EXTRA_PRESS_ACTION, it)
-                val contentIntent = PendingIntent.getActivity(context, 0, this, PendingIntent.FLAG_UPDATE_CURRENT)
-                builder.addAction(R.mipmap.ic_launcher, it, contentIntent)
+                putExtra(EXTRA_PRESS_ACTION, remoteAction)
+                val contentIntent = PendingIntent.getActivity(context, index, this, PendingIntent.FLAG_ONE_SHOT)
+                builder.addAction(R.mipmap.ic_launcher, remoteAction, contentIntent)
             }
 
         }
