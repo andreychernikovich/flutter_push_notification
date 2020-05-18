@@ -7,6 +7,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.os.Bundle
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.RemoteMessage
 import com.google.gson.Gson
@@ -48,21 +49,24 @@ class NotificationUtils {
         val builder = NotificationCompat.Builder(context, CHANNEL_ID).apply {
             setAutoCancel(true)
             setSmallIcon(R.mipmap.ic_launcher)
+            setCategory(NotificationCompat.CATEGORY_MESSAGE)
             setAutoCancel(true)
             priority = NotificationCompat.PRIORITY_HIGH
             message.data["title"]?.let { setContentTitle(it) }
             message.data["body"]?.let { setContentText(it) }
-            message.data["actions"]?.let { createActions(this, it) }
+            message.data["actions"]?.let { createActions(this, it, message) }
         }
         notificationManager.notify(1, builder.build())
 
     }
 
-    private fun createActions(builder: NotificationCompat.Builder, actions: String) {
+    private fun createActions(builder: NotificationCompat.Builder, actions: String, message: RemoteMessage) {
         Gson().fromJson(actions, Array<String>::class.java).map {
             Intent(context, activity.javaClass).apply {
-                action = it
-                val contentIntent = PendingIntent.getActivity(context, 0, this, 0)
+                action = ACTION_PRESS_PUSH_BUTTON
+                putExtra(EXTRA_PUSH_DATA, message)
+                putExtra(EXTRA_PRESS_ACTION, it)
+                val contentIntent = PendingIntent.getActivity(context, 0, this, PendingIntent.FLAG_UPDATE_CURRENT)
                 builder.addAction(R.mipmap.ic_launcher, it, contentIntent)
             }
 

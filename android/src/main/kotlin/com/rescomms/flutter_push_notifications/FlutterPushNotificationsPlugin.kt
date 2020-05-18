@@ -17,6 +17,7 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.RemoteMessage
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -27,6 +28,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import java.io.IOException
 
 
 /** FlutterPushNotificationsPlugin */
@@ -41,12 +43,12 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
     private val notificationUtils = NotificationUtils()
 
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutter_push_notifications")
+        channel = MethodChannel(flutterPluginBinding.flutterEngine.dartExecutor, "flutter_push_notifications")
         channel.setMethodCallHandler(this)
         context = flutterPluginBinding.applicationContext
         FirebaseApp.initializeApp(context)
         initBroadcast()
-        initFbToken()
+        getToken(null)
     }
 
     // This static function is optional and equivalent to onAttachedToEngine. It supports the old
@@ -68,10 +70,17 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
 
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        if (call.method == "getPlatformVersion") {
-            result.success("Android ${Build.VERSION.RELEASE}")
-        } else {
-            result.notImplemented()
+        when(call.method) {
+            "getToken" -> getToken(result)
+            "autoInitEnabled" -> result.success(FirebaseMessaging.getInstance().isAutoInitEnabled)
+            "setAutoInitEnabled" -> {
+                call.arguments.let { FirebaseMessaging.getInstance().isAutoInitEnabled = it as Boolean }
+                result.success(null)
+            }
+            "subscribeToTopic" -> subscribeToTopic(call.arguments as String, result)
+            "unsubscribeFromTopic" -> unsubscribeFromTopic(call.arguments as String, result)
+            "deleteInstanceID" -> deleteInstanceID(result)
+            else -> result.notImplemented()
         }
     }
 
@@ -83,12 +92,23 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
     override fun onReceive(context: Context, intent: Intent) {
         when (intent.action) {
             ACTION_REMOTE_MESSAGE -> intent.extras?.let { notificationUtils.createNotification(it[EXTRA_MESSAGE] as RemoteMessage) }
-            ACTION_NEW_FB_TOKEN -> intent.extras?.let { Log.e("AAAA", it[EXTRA_TOKEN] as String) }
+            ACTION_NEW_FB_TOKEN -> intent.extras?.let { channel.invokeMethod("onToken", it[EXTRA_TOKEN] as String) }
         }
     }
 
-    override fun onNewIntent(intent: Intent?): Boolean {
-        return false
+    override fun onNewIntent(intent: Intent): Boolean {
+        return when (intent.action) {
+            ACTION_PRESS_PUSH_BUTTON -> {
+                intent.getParcelableExtra<RemoteMessage>(EXTRA_PUSH_DATA).apply {
+                    this.data.toMutableMap().apply {
+                        intent.extras?.let { put("pressAction", it[EXTRA_PRESS_ACTION] as String) }
+                        channel.invokeMethod("onPushPress", this)
+                    }
+                }
+                true
+            }
+            else -> false
+        }
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
@@ -120,17 +140,59 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
         }
     }
 
-    private fun initFbToken() {
+    private fun getToken(result: Result?) {
         FirebaseInstanceId.getInstance().instanceId.addOnCompleteListener { task ->
             if (!task.isSuccessful) {
                 return@addOnCompleteListener
             }
             task.result?.let {
+                result?.success( it.token )
                 Intent(ACTION_NEW_FB_TOKEN).apply {
                     this.putExtra(EXTRA_TOKEN, it.token)
                     LocalBroadcastManager.getInstance(context).sendBroadcast(this)
                 }
             }
         }
+    }
+
+    private fun subscribeToTopic(topic: String, result: Result) {
+        FirebaseMessaging.getInstance().subscribeToTopic(topic).addOnCompleteListener { task->
+            if (!task.isSuccessful) {
+                task.exception?.let {
+                    result.error("subscribeToTopic", it.message, null)
+                }
+                return@addOnCompleteListener
+            }
+            result.success(null)
+        }
+    }
+
+    private fun unsubscribeFromTopic(topic: String, result: Result) {
+        FirebaseMessaging.getInstance().unsubscribeFromTopic(topic).addOnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                task.exception?.let {
+                    result.error("unsubscribeFromTopic", it.message, null)
+                }
+                return@addOnCompleteListener
+            }
+            result.success(null)
+        }
+    }
+
+    private fun deleteInstanceID(result: Result) {
+            try {
+                FirebaseInstanceId.getInstance().deleteInstanceId()
+                activity?.let {
+                    it.runOnUiThread {
+                        result.success(true)
+                    }
+                }
+            } catch ( exception: IOException) {
+                activity?.let {
+                    it.runOnUiThread {
+                        result.success(false)
+                    }
+                }
+            }
     }
 }
