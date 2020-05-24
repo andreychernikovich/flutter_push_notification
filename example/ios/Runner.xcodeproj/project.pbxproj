@@ -7,17 +7,116 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C587C0247A00D700426E66 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C587BF247A007E00426E66 /* Pods_Runner.framework */; };
+		09C587C1247A00D700426E66 /* Pods_Runner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09C587BF247A007E00426E66 /* Pods_Runner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09C587ED247A051C00426E66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09C587C3247A051C00426E66 /* GoogleService-Info.plist */; };
+		09C587F6247A1DEF00426E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C587F5247A1DEF00426E66 /* AppDelegate.m */; };
+		09C5880C247A1E3800426E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C5880B247A1E3800426E66 /* main.m */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		3B80C3941E831B6300D905FE /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; };
 		3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B80C3931E831B6300D905FE /* App.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
+		470B1BA801641CB93323B873 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC3FEC21B60752C6240C46E /* Pods_Runner.framework */; };
 		9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; };
 		9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9740EEBA1CF902C7004384FC /* Flutter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09C587BC247A007E00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2985B23CEB1C896672BB6C4ACC21784C;
+			remoteInfo = flutter_push_notifications;
+		};
+		09C587BE247A007E00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 669E8F25E1897672BDB80B7EB784DA24;
+			remoteInfo = "Pods-Runner";
+		};
+		09C587D7247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2B63D462DB7F827C4B11FD51E4F8E2D;
+			remoteInfo = FirebaseCore;
+		};
+		09C587D9247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC9178C366942FD6FF6A115604EAD58;
+			remoteInfo = FirebaseCoreDiagnostics;
+		};
+		09C587DB247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 13C8C8B254851998F9289F71229B28A2;
+			remoteInfo = FirebaseInstallations;
+		};
+		09C587DD247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA0D814DFCB860D31D7BCD63D795858;
+			remoteInfo = FirebaseInstanceID;
+		};
+		09C587DF247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5B654B4B042BA7DC93766943A643E42B;
+			remoteInfo = FirebaseMessaging;
+		};
+		09C587E1247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 856B5CD56F194FAD26EA91620B66D614;
+			remoteInfo = GoogleDataTransport;
+		};
+		09C587E3247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6942351307BC1F54575D9853307EAE0E;
+			remoteInfo = GoogleDataTransportCCTSupport;
+		};
+		09C587E5247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B43874C6CBB50E7134FBEC24BABFE14F;
+			remoteInfo = GoogleUtilities;
+		};
+		09C587E7247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06FC5C9CF96D60C50FCD47D339C91951;
+			remoteInfo = nanopb;
+		};
+		09C587E9247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3347A1AB6546F0A3977529B8F199DC41;
+			remoteInfo = PromisesObjC;
+		};
+		09C587EB247A051C00426E66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C2105C94812B6214B154F54DCEDB72AC;
+			remoteInfo = Protobuf;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
@@ -28,6 +127,7 @@
 			files = (
 				3B80C3951E831B6300D905FE /* App.framework in Embed Frameworks */,
 				9705A1C71CF904A300538489 /* Flutter.framework in Embed Frameworks */,
+				09C587C1247A00D700426E66 /* Pods_Runner.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,13 +135,491 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09C5857B247A007D00426E66 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
+		09C5857F247A007D00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58583247A007D00426E66 /* FIRCoreDiagnosticsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRCoreDiagnosticsData.h; sourceTree = "<group>"; };
+		09C58584247A007D00426E66 /* FIRCoreDiagnosticsInterop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRCoreDiagnosticsInterop.h; sourceTree = "<group>"; };
+		09C58585247A007D00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58589247A007D00426E66 /* FIRErrors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRErrors.m; sourceTree = "<group>"; };
+		09C5858A247A007D00426E66 /* FIRConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRConfiguration.m; sourceTree = "<group>"; };
+		09C5858B247A007D00426E66 /* FIRApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRApp.m; sourceTree = "<group>"; };
+		09C5858C247A007D00426E66 /* FIROptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIROptions.m; sourceTree = "<group>"; };
+		09C5858D247A007D00426E66 /* FIRAppAssociationRegistration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRAppAssociationRegistration.m; sourceTree = "<group>"; };
+		09C5858E247A007D00426E66 /* FIRComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRComponent.m; sourceTree = "<group>"; };
+		09C5858F247A007D00426E66 /* FIRBundleUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRBundleUtil.h; sourceTree = "<group>"; };
+		09C58590247A007D00426E66 /* FIRAnalyticsConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRAnalyticsConfiguration.m; sourceTree = "<group>"; };
+		09C58591247A007D00426E66 /* FIRVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRVersion.m; sourceTree = "<group>"; };
+		09C58592247A007D00426E66 /* FIRCoreDiagnosticsConnector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRCoreDiagnosticsConnector.m; sourceTree = "<group>"; };
+		09C58594247A007E00426E66 /* FIRConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRConfiguration.h; sourceTree = "<group>"; };
+		09C58595247A007E00426E66 /* FIROptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIROptions.h; sourceTree = "<group>"; };
+		09C58596247A007E00426E66 /* FIRApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRApp.h; sourceTree = "<group>"; };
+		09C58597247A007E00426E66 /* FIRLoggerLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRLoggerLevel.h; sourceTree = "<group>"; };
+		09C58598247A007E00426E66 /* FirebaseCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseCore.h; sourceTree = "<group>"; };
+		09C5859A247A007E00426E66 /* FIRComponentContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRComponentContainer.h; sourceTree = "<group>"; };
+		09C5859B247A007E00426E66 /* FIROptionsInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIROptionsInternal.h; sourceTree = "<group>"; };
+		09C5859C247A007E00426E66 /* FIRLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRLogger.h; sourceTree = "<group>"; };
+		09C5859D247A007E00426E66 /* FIRAppInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRAppInternal.h; sourceTree = "<group>"; };
+		09C5859E247A007E00426E66 /* FIRComponentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRComponentType.h; sourceTree = "<group>"; };
+		09C5859F247A007E00426E66 /* FIRDiagnosticsData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRDiagnosticsData.h; sourceTree = "<group>"; };
+		09C585A0247A007E00426E66 /* FIRDependency.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRDependency.h; sourceTree = "<group>"; };
+		09C585A1247A007E00426E66 /* FIRHeartbeatInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRHeartbeatInfo.h; sourceTree = "<group>"; };
+		09C585A2247A007E00426E66 /* FIRErrorCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRErrorCode.h; sourceTree = "<group>"; };
+		09C585A3247A007E00426E66 /* FIRConfigurationInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRConfigurationInternal.h; sourceTree = "<group>"; };
+		09C585A4247A007E00426E66 /* FIRErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRErrors.h; sourceTree = "<group>"; };
+		09C585A5247A007E00426E66 /* FIRComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRComponent.h; sourceTree = "<group>"; };
+		09C585A6247A007E00426E66 /* FIRAppAssociationRegistration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRAppAssociationRegistration.h; sourceTree = "<group>"; };
+		09C585A7247A007E00426E66 /* FIRAnalyticsConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRAnalyticsConfiguration.h; sourceTree = "<group>"; };
+		09C585A8247A007E00426E66 /* FIRComponentContainerInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRComponentContainerInternal.h; sourceTree = "<group>"; };
+		09C585A9247A007E00426E66 /* FIRLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRLibrary.h; sourceTree = "<group>"; };
+		09C585AA247A007E00426E66 /* FIRCoreDiagnosticsConnector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRCoreDiagnosticsConnector.h; sourceTree = "<group>"; };
+		09C585AB247A007E00426E66 /* FIRComponentContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRComponentContainer.m; sourceTree = "<group>"; };
+		09C585AC247A007E00426E66 /* FIRComponentType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRComponentType.m; sourceTree = "<group>"; };
+		09C585AD247A007E00426E66 /* FIRLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRLogger.m; sourceTree = "<group>"; };
+		09C585AE247A007E00426E66 /* FIRBundleUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRBundleUtil.m; sourceTree = "<group>"; };
+		09C585AF247A007E00426E66 /* FIRDiagnosticsData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRDiagnosticsData.m; sourceTree = "<group>"; };
+		09C585B0247A007E00426E66 /* FIRHeartbeatInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRHeartbeatInfo.m; sourceTree = "<group>"; };
+		09C585B1247A007E00426E66 /* FIRVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRVersion.h; sourceTree = "<group>"; };
+		09C585B2247A007E00426E66 /* FIRDependency.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRDependency.m; sourceTree = "<group>"; };
+		09C585B3247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C585B4247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C585B7247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C585B8247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C585BB247A007E00426E66 /* FBLPromise+Await.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Await.m"; sourceTree = "<group>"; };
+		09C585BC247A007E00426E66 /* FBLPromise+Retry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Retry.m"; sourceTree = "<group>"; };
+		09C585BD247A007E00426E66 /* FBLPromise+Do.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Do.m"; sourceTree = "<group>"; };
+		09C585BE247A007E00426E66 /* FBLPromise+Delay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Delay.m"; sourceTree = "<group>"; };
+		09C585C0247A007E00426E66 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Testing.h"; sourceTree = "<group>"; };
+		09C585C1247A007E00426E66 /* FBLPromise+Reduce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Reduce.h"; sourceTree = "<group>"; };
+		09C585C2247A007E00426E66 /* FBLPromise+Catch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Catch.h"; sourceTree = "<group>"; };
+		09C585C3247A007E00426E66 /* FBLPromise+Recover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Recover.h"; sourceTree = "<group>"; };
+		09C585C4247A007E00426E66 /* FBLPromise+Validate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Validate.h"; sourceTree = "<group>"; };
+		09C585C5247A007E00426E66 /* FBLPromise+All.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+All.h"; sourceTree = "<group>"; };
+		09C585C6247A007E00426E66 /* FBLPromise+Race.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Race.h"; sourceTree = "<group>"; };
+		09C585C7247A007E00426E66 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Wrap.h"; sourceTree = "<group>"; };
+		09C585C8247A007E00426E66 /* FBLPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromise.h; sourceTree = "<group>"; };
+		09C585C9247A007E00426E66 /* FBLPromises.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromises.h; sourceTree = "<group>"; };
+		09C585CA247A007E00426E66 /* FBLPromisePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromisePrivate.h; sourceTree = "<group>"; };
+		09C585CB247A007E00426E66 /* FBLPromise+Retry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Retry.h"; sourceTree = "<group>"; };
+		09C585CC247A007E00426E66 /* FBLPromise+Await.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Await.h"; sourceTree = "<group>"; };
+		09C585CD247A007E00426E66 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Delay.h"; sourceTree = "<group>"; };
+		09C585CE247A007E00426E66 /* FBLPromise+Do.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Do.h"; sourceTree = "<group>"; };
+		09C585CF247A007E00426E66 /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Timeout.h"; sourceTree = "<group>"; };
+		09C585D0247A007E00426E66 /* FBLPromiseError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromiseError.h; sourceTree = "<group>"; };
+		09C585D1247A007E00426E66 /* FBLPromise+Then.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Then.h"; sourceTree = "<group>"; };
+		09C585D2247A007E00426E66 /* FBLPromise+Async.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Async.h"; sourceTree = "<group>"; };
+		09C585D3247A007E00426E66 /* FBLPromise+Always.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Always.h"; sourceTree = "<group>"; };
+		09C585D4247A007E00426E66 /* FBLPromise+Any.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Any.h"; sourceTree = "<group>"; };
+		09C585D5247A007E00426E66 /* FBLPromise+Then.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Then.m"; sourceTree = "<group>"; };
+		09C585D6247A007E00426E66 /* FBLPromiseError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLPromiseError.m; sourceTree = "<group>"; };
+		09C585D7247A007E00426E66 /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Timeout.m"; sourceTree = "<group>"; };
+		09C585D8247A007E00426E66 /* FBLPromise+Any.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Any.m"; sourceTree = "<group>"; };
+		09C585D9247A007E00426E66 /* FBLPromise+Async.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Async.m"; sourceTree = "<group>"; };
+		09C585DA247A007E00426E66 /* FBLPromise+Always.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Always.m"; sourceTree = "<group>"; };
+		09C585DB247A007E00426E66 /* FBLPromise+Catch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Catch.m"; sourceTree = "<group>"; };
+		09C585DC247A007E00426E66 /* FBLPromise+Reduce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Reduce.m"; sourceTree = "<group>"; };
+		09C585DD247A007E00426E66 /* FBLPromise+Testing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Testing.m"; sourceTree = "<group>"; };
+		09C585DE247A007E00426E66 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Recover.m"; sourceTree = "<group>"; };
+		09C585DF247A007E00426E66 /* FBLPromise+Race.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Race.m"; sourceTree = "<group>"; };
+		09C585E0247A007E00426E66 /* FBLPromise+All.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+All.m"; sourceTree = "<group>"; };
+		09C585E1247A007E00426E66 /* FBLPromise+Validate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Validate.m"; sourceTree = "<group>"; };
+		09C585E2247A007E00426E66 /* FBLPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLPromise.m; sourceTree = "<group>"; };
+		09C585E3247A007E00426E66 /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Wrap.m"; sourceTree = "<group>"; };
+		09C585E5247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C585E8247A007E00426E66 /* GDTCORAssert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORAssert.m; sourceTree = "<group>"; };
+		09C585E9247A007E00426E66 /* GDTCORLifecycle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORLifecycle.m; sourceTree = "<group>"; };
+		09C585EA247A007E00426E66 /* GDTCORUploadCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORUploadCoordinator.m; sourceTree = "<group>"; };
+		09C585EB247A007E00426E66 /* GDTCORReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORReachability.m; sourceTree = "<group>"; };
+		09C585EC247A007E00426E66 /* GDTCORUploadPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORUploadPackage.m; sourceTree = "<group>"; };
+		09C585ED247A007E00426E66 /* GDTCORFlatFileStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORFlatFileStorage.m; sourceTree = "<group>"; };
+		09C585EE247A007E00426E66 /* GDTCOREvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCOREvent.m; sourceTree = "<group>"; };
+		09C585EF247A007E00426E66 /* GDTCORClock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORClock.m; sourceTree = "<group>"; };
+		09C585F1247A007E00426E66 /* GDTCORPrioritizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORPrioritizer.h; sourceTree = "<group>"; };
+		09C585F2247A007E00426E66 /* GDTCORClock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORClock.h; sourceTree = "<group>"; };
+		09C585F3247A007E00426E66 /* GDTCORRegistrar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORRegistrar.h; sourceTree = "<group>"; };
+		09C585F4247A007E00426E66 /* GDTCORTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORTransport.h; sourceTree = "<group>"; };
+		09C585F5247A007E00426E66 /* GDTCORConsoleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORConsoleLogger.h; sourceTree = "<group>"; };
+		09C585F6247A007E00426E66 /* GDTCORPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORPlatform.h; sourceTree = "<group>"; };
+		09C585F7247A007E00426E66 /* GDTCORStorageProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORStorageProtocol.h; sourceTree = "<group>"; };
+		09C585F8247A007E00426E66 /* GDTCORUploader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORUploader.h; sourceTree = "<group>"; };
+		09C585F9247A007E00426E66 /* GDTCOREventTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCOREventTransformer.h; sourceTree = "<group>"; };
+		09C585FA247A007E00426E66 /* GDTCORAssert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORAssert.h; sourceTree = "<group>"; };
+		09C585FB247A007E00426E66 /* GDTCORLifecycle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORLifecycle.h; sourceTree = "<group>"; };
+		09C585FC247A007E00426E66 /* GoogleDataTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleDataTransport.h; sourceTree = "<group>"; };
+		09C585FD247A007E00426E66 /* GDTCORTargets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORTargets.h; sourceTree = "<group>"; };
+		09C585FE247A007E00426E66 /* GDTCORReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORReachability.h; sourceTree = "<group>"; };
+		09C585FF247A007E00426E66 /* GDTCOREvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCOREvent.h; sourceTree = "<group>"; };
+		09C58600247A007E00426E66 /* GDTCOREventDataObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCOREventDataObject.h; sourceTree = "<group>"; };
+		09C58601247A007E00426E66 /* GDTCORUploadPackage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORUploadPackage.h; sourceTree = "<group>"; };
+		09C58602247A007E00426E66 /* GDTCORDataFuture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORDataFuture.m; sourceTree = "<group>"; };
+		09C58604247A007E00426E66 /* GDTCORDataFuture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORDataFuture.h; sourceTree = "<group>"; };
+		09C58605247A007E00426E66 /* GDTCORReachability_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORReachability_Private.h; sourceTree = "<group>"; };
+		09C58606247A007E00426E66 /* GDTCORTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORTransformer.h; sourceTree = "<group>"; };
+		09C58607247A007E00426E66 /* GDTCORUploadPackage_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORUploadPackage_Private.h; sourceTree = "<group>"; };
+		09C58608247A007E00426E66 /* GDTCORRegistrar_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORRegistrar_Private.h; sourceTree = "<group>"; };
+		09C58609247A007E00426E66 /* GDTCORUploadCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORUploadCoordinator.h; sourceTree = "<group>"; };
+		09C5860A247A007E00426E66 /* GDTCORTransformer_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORTransformer_Private.h; sourceTree = "<group>"; };
+		09C5860B247A007E00426E66 /* GDTCORTransport_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORTransport_Private.h; sourceTree = "<group>"; };
+		09C5860C247A007E00426E66 /* GDTCORFlatFileStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCORFlatFileStorage.h; sourceTree = "<group>"; };
+		09C5860D247A007E00426E66 /* GDTCOREvent_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCOREvent_Private.h; sourceTree = "<group>"; };
+		09C5860E247A007E00426E66 /* GDTCORTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORTransformer.m; sourceTree = "<group>"; };
+		09C5860F247A007E00426E66 /* GDTCORRegistrar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORRegistrar.m; sourceTree = "<group>"; };
+		09C58610247A007E00426E66 /* GDTCORTransport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORTransport.m; sourceTree = "<group>"; };
+		09C58611247A007E00426E66 /* GDTCORPlatform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORPlatform.m; sourceTree = "<group>"; };
+		09C58612247A007E00426E66 /* GDTCORConsoleLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCORConsoleLogger.m; sourceTree = "<group>"; };
+		09C58613247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58615247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58619247A007E00426E66 /* GDTCCTPrioritizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCCTPrioritizer.m; sourceTree = "<group>"; };
+		09C5861A247A007E00426E66 /* GDTCCTCompressionHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCCTCompressionHelper.m; sourceTree = "<group>"; };
+		09C5861B247A007E00426E66 /* GDTCCTNanopbHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCCTNanopbHelpers.m; sourceTree = "<group>"; };
+		09C5861C247A007E00426E66 /* GDTCCTUploader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDTCCTUploader.m; sourceTree = "<group>"; };
+		09C5861E247A007E00426E66 /* GDTCCTUploader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCCTUploader.h; sourceTree = "<group>"; };
+		09C5861F247A007E00426E66 /* GDTCOREvent+NetworkConnectionInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GDTCOREvent+NetworkConnectionInfo.h"; sourceTree = "<group>"; };
+		09C58620247A007E00426E66 /* GDTCCTPrioritizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCCTPrioritizer.h; sourceTree = "<group>"; };
+		09C58621247A007E00426E66 /* GDTCCTCompressionHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCCTCompressionHelper.h; sourceTree = "<group>"; };
+		09C58622247A007E00426E66 /* GDTCCTNanopbHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDTCCTNanopbHelpers.h; sourceTree = "<group>"; };
+		09C58623247A007E00426E66 /* GDTCOREvent+NetworkConnectionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GDTCOREvent+NetworkConnectionInfo.m"; sourceTree = "<group>"; };
+		09C58626247A007E00426E66 /* cct.nanopb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cct.nanopb.h; sourceTree = "<group>"; };
+		09C58627247A007E00426E66 /* cct.nanopb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = cct.nanopb.c; sourceTree = "<group>"; };
+		09C58628247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C5862B247A007E00426E66 /* Flutter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Flutter.xcconfig; sourceTree = "<group>"; };
+		09C5862D247A007E00426E66 /* Pods-Runner-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pods-Runner-acknowledgements.plist"; sourceTree = "<group>"; };
+		09C5862E247A007E00426E66 /* Pods-Runner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pods-Runner-Info.plist"; sourceTree = "<group>"; };
+		09C5862F247A007E00426E66 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		09C58630247A007E00426E66 /* Pods-Runner-acknowledgements.markdown */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Pods-Runner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		09C58631247A007E00426E66 /* Pods-Runner-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pods-Runner-umbrella.h"; sourceTree = "<group>"; };
+		09C58632247A007E00426E66 /* Pods-Runner.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Runner.modulemap"; sourceTree = "<group>"; };
+		09C58633247A007E00426E66 /* Pods-Runner-frameworks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "Pods-Runner-frameworks.sh"; sourceTree = "<group>"; };
+		09C58634247A007E00426E66 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		09C58635247A007E00426E66 /* Pods-Runner-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Pods-Runner-dummy.m"; sourceTree = "<group>"; };
+		09C58636247A007E00426E66 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		09C58638247A007E00426E66 /* flutter_push_notifications.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = flutter_push_notifications.modulemap; sourceTree = "<group>"; };
+		09C58639247A007E00426E66 /* flutter_push_notifications-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flutter_push_notifications-umbrella.h"; sourceTree = "<group>"; };
+		09C5863A247A007E00426E66 /* flutter_push_notifications.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = flutter_push_notifications.xcconfig; sourceTree = "<group>"; };
+		09C5863B247A007E00426E66 /* flutter_push_notifications-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "flutter_push_notifications-prefix.pch"; sourceTree = "<group>"; };
+		09C5863C247A007E00426E66 /* flutter_push_notifications-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "flutter_push_notifications-dummy.m"; sourceTree = "<group>"; };
+		09C5863D247A007E00426E66 /* flutter_push_notifications-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "flutter_push_notifications-Info.plist"; sourceTree = "<group>"; };
+		09C5863E247A007E00426E66 /* Manifest.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
+		09C58640247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58641247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58644247A007E00426E66 /* FIRInstanceIDLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDLogger.h; sourceTree = "<group>"; };
+		09C58645247A007E00426E66 /* FIRInstanceIDAuthService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDAuthService.h; sourceTree = "<group>"; };
+		09C58646247A007E00426E66 /* FIRInstanceIDCheckinService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDCheckinService.m; sourceTree = "<group>"; };
+		09C58647247A007E00426E66 /* NSError+FIRInstanceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+FIRInstanceID.h"; sourceTree = "<group>"; };
+		09C58648247A007E00426E66 /* FIRInstanceIDBackupExcludedPlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDBackupExcludedPlist.m; sourceTree = "<group>"; };
+		09C58649247A007E00426E66 /* FIRInstanceIDAPNSInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDAPNSInfo.h; sourceTree = "<group>"; };
+		09C5864A247A007E00426E66 /* FIRInstanceIDTokenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenManager.m; sourceTree = "<group>"; };
+		09C5864B247A007E00426E66 /* FIRInstanceIDAuthKeyChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDAuthKeyChain.h; sourceTree = "<group>"; };
+		09C5864C247A007E00426E66 /* FIRInstanceIDConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDConstants.m; sourceTree = "<group>"; };
+		09C5864D247A007E00426E66 /* FIRInstanceIDTokenDeleteOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenDeleteOperation.h; sourceTree = "<group>"; };
+		09C5864E247A007E00426E66 /* FIRInstanceIDCombinedHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDCombinedHandler.m; sourceTree = "<group>"; };
+		09C5864F247A007E00426E66 /* FIRInstanceIDVersionUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDVersionUtilities.h; sourceTree = "<group>"; };
+		09C58650247A007E00426E66 /* FIRInstanceIDTokenInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenInfo.h; sourceTree = "<group>"; };
+		09C58651247A007E00426E66 /* FIRInstanceIDCheckinStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDCheckinStore.m; sourceTree = "<group>"; };
+		09C58652247A007E00426E66 /* FIRInstanceID+Private.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FIRInstanceID+Private.m"; sourceTree = "<group>"; };
+		09C58653247A007E00426E66 /* FIRInstanceIDURLQueryItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDURLQueryItem.h; sourceTree = "<group>"; };
+		09C58654247A007E00426E66 /* FIRInstanceIDTokenFetchOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenFetchOperation.m; sourceTree = "<group>"; };
+		09C58655247A007E00426E66 /* FIRInstanceIDStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDStore.h; sourceTree = "<group>"; };
+		09C58656247A007E00426E66 /* FIRInstanceIDTokenStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenStore.h; sourceTree = "<group>"; };
+		09C58657247A007E00426E66 /* FIRInstanceIDTokenOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenOperation.h; sourceTree = "<group>"; };
+		09C58658247A007E00426E66 /* FIRInstanceIDKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDKeychain.h; sourceTree = "<group>"; };
+		09C58659247A007E00426E66 /* FIRInstanceIDUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDUtilities.h; sourceTree = "<group>"; };
+		09C5865A247A007E00426E66 /* FIRInstanceIDCheckinPreferences+Internal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FIRInstanceIDCheckinPreferences+Internal.m"; sourceTree = "<group>"; };
+		09C5865B247A007E00426E66 /* FIRInstanceIDTokenOperation+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIRInstanceIDTokenOperation+Private.h"; sourceTree = "<group>"; };
+		09C5865C247A007E00426E66 /* FIRInstanceIDBackupExcludedPlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDBackupExcludedPlist.h; sourceTree = "<group>"; };
+		09C5865D247A007E00426E66 /* NSError+FIRInstanceID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+FIRInstanceID.m"; sourceTree = "<group>"; };
+		09C5865E247A007E00426E66 /* FIRInstanceIDAuthService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDAuthService.m; sourceTree = "<group>"; };
+		09C5865F247A007E00426E66 /* FIRInstanceIDCheckinService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDCheckinService.h; sourceTree = "<group>"; };
+		09C58660247A007E00426E66 /* FIRInstanceIDDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDDefines.h; sourceTree = "<group>"; };
+		09C58661247A007E00426E66 /* FIRInstanceIDLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDLogger.m; sourceTree = "<group>"; };
+		09C58663247A007E00426E66 /* FirebaseInstanceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseInstanceID.h; sourceTree = "<group>"; };
+		09C58664247A007E00426E66 /* FIRInstanceID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceID.h; sourceTree = "<group>"; };
+		09C58666247A007E00426E66 /* FIRInstanceIDCheckinPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDCheckinPreferences.h; sourceTree = "<group>"; };
+		09C58667247A007E00426E66 /* FIRInstanceID_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceID_Private.h; sourceTree = "<group>"; };
+		09C58668247A007E00426E66 /* FIRInstanceID+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIRInstanceID+Private.h"; sourceTree = "<group>"; };
+		09C58669247A007E00426E66 /* FIRInstanceIDVersionUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDVersionUtilities.m; sourceTree = "<group>"; };
+		09C5866A247A007E00426E66 /* FIRInstanceIDCombinedHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDCombinedHandler.h; sourceTree = "<group>"; };
+		09C5866B247A007E00426E66 /* FIRInstanceIDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDConstants.h; sourceTree = "<group>"; };
+		09C5866C247A007E00426E66 /* FIRInstanceIDTokenDeleteOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenDeleteOperation.m; sourceTree = "<group>"; };
+		09C5866D247A007E00426E66 /* FIRInstanceIDAuthKeyChain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDAuthKeyChain.m; sourceTree = "<group>"; };
+		09C5866E247A007E00426E66 /* FIRInstanceIDTokenManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenManager.h; sourceTree = "<group>"; };
+		09C5866F247A007E00426E66 /* FIRInstanceIDAPNSInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDAPNSInfo.m; sourceTree = "<group>"; };
+		09C58670247A007E00426E66 /* FIRInstanceIDCheckinPreferences_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDCheckinPreferences_Private.h; sourceTree = "<group>"; };
+		09C58671247A007E00426E66 /* FIRInstanceIDStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDStore.m; sourceTree = "<group>"; };
+		09C58672247A007E00426E66 /* FIRInstanceIDCheckinPreferences.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDCheckinPreferences.m; sourceTree = "<group>"; };
+		09C58673247A007E00426E66 /* FIRInstanceIDTokenFetchOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDTokenFetchOperation.h; sourceTree = "<group>"; };
+		09C58674247A007E00426E66 /* FIRInstanceIDURLQueryItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDURLQueryItem.m; sourceTree = "<group>"; };
+		09C58675247A007E00426E66 /* FIRInstanceIDCheckinStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstanceIDCheckinStore.h; sourceTree = "<group>"; };
+		09C58676247A007E00426E66 /* FIRInstanceIDTokenInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenInfo.m; sourceTree = "<group>"; };
+		09C58677247A007E00426E66 /* FIRInstanceID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceID.m; sourceTree = "<group>"; };
+		09C58678247A007E00426E66 /* FIRInstanceIDUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDUtilities.m; sourceTree = "<group>"; };
+		09C58679247A007E00426E66 /* FIRIMessageCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRIMessageCode.h; sourceTree = "<group>"; };
+		09C5867A247A007E00426E66 /* FIRInstanceIDCheckinPreferences+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIRInstanceIDCheckinPreferences+Internal.h"; sourceTree = "<group>"; };
+		09C5867B247A007E00426E66 /* FIRInstanceIDKeychain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDKeychain.m; sourceTree = "<group>"; };
+		09C5867C247A007E00426E66 /* FIRInstanceIDTokenOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenOperation.m; sourceTree = "<group>"; };
+		09C5867D247A007E00426E66 /* FIRInstanceIDTokenStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstanceIDTokenStore.m; sourceTree = "<group>"; };
+		09C5867F247A007E00426E66 /* Flutter.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Flutter.podspec.json; sourceTree = "<group>"; };
+		09C58680247A007E00426E66 /* flutter_push_notifications.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flutter_push_notifications.podspec.json; sourceTree = "<group>"; };
+		09C58682247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58683247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58687247A007E00426E66 /* FIRCoreDiagnostics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRCoreDiagnostics.m; sourceTree = "<group>"; };
+		09C5868A247A007E00426E66 /* firebasecore.nanopb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = firebasecore.nanopb.c; sourceTree = "<group>"; };
+		09C5868B247A007E00426E66 /* firebasecore.nanopb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firebasecore.nanopb.h; sourceTree = "<group>"; };
+		09C5868D247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58692247A007E00426E66 /* FIRInstallationsAPIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsAPIService.m; sourceTree = "<group>"; };
+		09C58693247A007E00426E66 /* FIRInstallationsItem+RegisterInstallationAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FIRInstallationsItem+RegisterInstallationAPI.h"; sourceTree = "<group>"; };
+		09C58694247A007E00426E66 /* FIRInstallationsItem+RegisterInstallationAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FIRInstallationsItem+RegisterInstallationAPI.m"; sourceTree = "<group>"; };
+		09C58695247A007E00426E66 /* FIRInstallationsAPIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsAPIService.h; sourceTree = "<group>"; };
+		09C58696247A007E00426E66 /* FIRInstallationsLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsLogger.h; sourceTree = "<group>"; };
+		09C58697247A007E00426E66 /* FIRInstallationsItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsItem.h; sourceTree = "<group>"; };
+		09C58698247A007E00426E66 /* FIRInstallationsAuthTokenResultInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsAuthTokenResultInternal.h; sourceTree = "<group>"; };
+		09C58699247A007E00426E66 /* FIRInstallationsAuthTokenResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsAuthTokenResult.m; sourceTree = "<group>"; };
+		09C5869A247A007E00426E66 /* FIRInstallations.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallations.m; sourceTree = "<group>"; };
+		09C5869B247A007E00426E66 /* FIRInstallationsLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsLogger.m; sourceTree = "<group>"; };
+		09C5869D247A007E00426E66 /* FIRInstallationsVersion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsVersion.h; sourceTree = "<group>"; };
+		09C5869E247A007E00426E66 /* FIRInstallationsErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsErrors.h; sourceTree = "<group>"; };
+		09C5869F247A007E00426E66 /* FirebaseInstallations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseInstallations.h; sourceTree = "<group>"; };
+		09C586A0247A007E00426E66 /* FIRInstallations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallations.h; sourceTree = "<group>"; };
+		09C586A1247A007E00426E66 /* FIRInstallationsAuthTokenResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsAuthTokenResult.h; sourceTree = "<group>"; };
+		09C586A2247A007E00426E66 /* FIRInstallationsItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsItem.m; sourceTree = "<group>"; };
+		09C586A4247A007E00426E66 /* FIRInstallationsSingleOperationPromiseCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsSingleOperationPromiseCache.h; sourceTree = "<group>"; };
+		09C586A5247A007E00426E66 /* FIRInstallationsIDController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsIDController.m; sourceTree = "<group>"; };
+		09C586A6247A007E00426E66 /* FIRInstallationsSingleOperationPromiseCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsSingleOperationPromiseCache.m; sourceTree = "<group>"; };
+		09C586A7247A007E00426E66 /* FIRInstallationsIDController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsIDController.h; sourceTree = "<group>"; };
+		09C586A8247A007E00426E66 /* FIRInstallationsStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsStatus.h; sourceTree = "<group>"; };
+		09C586AA247A007E00426E66 /* FIRInstallationsHTTPError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsHTTPError.h; sourceTree = "<group>"; };
+		09C586AB247A007E00426E66 /* FIRInstallationsErrorUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsErrorUtil.m; sourceTree = "<group>"; };
+		09C586AC247A007E00426E66 /* FIRInstallationsHTTPError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsHTTPError.m; sourceTree = "<group>"; };
+		09C586AD247A007E00426E66 /* FIRInstallationsErrorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsErrorUtil.h; sourceTree = "<group>"; };
+		09C586AF247A007E00426E66 /* FIRInstallationsStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsStore.h; sourceTree = "<group>"; };
+		09C586B0247A007E00426E66 /* FIRInstallationsStoredAuthToken.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsStoredAuthToken.m; sourceTree = "<group>"; };
+		09C586B1247A007E00426E66 /* FIRInstallationsStoredItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsStoredItem.m; sourceTree = "<group>"; };
+		09C586B2247A007E00426E66 /* FIRInstallationsStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsStore.m; sourceTree = "<group>"; };
+		09C586B3247A007E00426E66 /* FIRInstallationsStoredItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsStoredItem.h; sourceTree = "<group>"; };
+		09C586B4247A007E00426E66 /* FIRInstallationsStoredAuthToken.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsStoredAuthToken.h; sourceTree = "<group>"; };
+		09C586B5247A007E00426E66 /* FIRInstallationsVersion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsVersion.m; sourceTree = "<group>"; };
+		09C586B7247A007E00426E66 /* FIRInstallationsIIDStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsIIDStore.m; sourceTree = "<group>"; };
+		09C586B8247A007E00426E66 /* FIRInstallationsIIDTokenStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRInstallationsIIDTokenStore.m; sourceTree = "<group>"; };
+		09C586B9247A007E00426E66 /* FIRInstallationsIIDStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsIIDStore.h; sourceTree = "<group>"; };
+		09C586BA247A007E00426E66 /* FIRInstallationsIIDTokenStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInstallationsIIDTokenStore.h; sourceTree = "<group>"; };
+		09C586BB247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C586BE247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C586C1247A007E00426E66 /* Firebase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		09C586C2247A007E00426E66 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		09C586C3247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C586C7247A007E00426E66 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		09C586C8247A007E00426E66 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		09C586CA247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C586CB247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C586CF247A007E00426E66 /* FIRMessagingRemoteNotificationsProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingRemoteNotificationsProxy.m; sourceTree = "<group>"; };
+		09C586D0247A007E00426E66 /* NSDictionary+FIRMessaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FIRMessaging.m"; sourceTree = "<group>"; };
+		09C586D1247A007E00426E66 /* FIRMessagingPersistentSyncMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingPersistentSyncMessage.h; sourceTree = "<group>"; };
+		09C586D3247A007E00426E66 /* GtalkExtensions.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GtalkExtensions.pbobjc.h; sourceTree = "<group>"; };
+		09C586D4247A007E00426E66 /* GtalkCore.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GtalkCore.pbobjc.h; sourceTree = "<group>"; };
+		09C586D5247A007E00426E66 /* GtalkExtensions.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GtalkExtensions.pbobjc.m; sourceTree = "<group>"; };
+		09C586D6247A007E00426E66 /* GtalkCore.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GtalkCore.pbobjc.m; sourceTree = "<group>"; };
+		09C586D7247A007E00426E66 /* FIRMessagingConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingConstants.m; sourceTree = "<group>"; };
+		09C586D8247A007E00426E66 /* FIRMessagingSyncMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingSyncMessageManager.m; sourceTree = "<group>"; };
+		09C586D9247A007E00426E66 /* FIRMMessageCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMMessageCode.h; sourceTree = "<group>"; };
+		09C586DA247A007E00426E66 /* FIRMessagingSecureSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingSecureSocket.m; sourceTree = "<group>"; };
+		09C586DB247A007E00426E66 /* FIRMessagingExtensionHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingExtensionHelper.m; sourceTree = "<group>"; };
+		09C586DC247A007E00426E66 /* FIRMessagingTopicOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingTopicOperation.h; sourceTree = "<group>"; };
+		09C586DD247A007E00426E66 /* FIRMessagingDelayedMessageQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingDelayedMessageQueue.h; sourceTree = "<group>"; };
+		09C586DE247A007E00426E66 /* NSError+FIRMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError+FIRMessaging.h"; sourceTree = "<group>"; };
+		09C586DF247A007E00426E66 /* FIRMessagingConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingConnection.h; sourceTree = "<group>"; };
+		09C586E0247A007E00426E66 /* FIRMessagingAnalytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingAnalytics.m; sourceTree = "<group>"; };
+		09C586E1247A007E00426E66 /* FIRMessagingClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingClient.h; sourceTree = "<group>"; };
+		09C586E2247A007E00426E66 /* FIRMessagingRmqManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingRmqManager.m; sourceTree = "<group>"; };
+		09C586E3247A007E00426E66 /* FIRMessagingVersionUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingVersionUtilities.m; sourceTree = "<group>"; };
+		09C586E4247A007E00426E66 /* FIRMessagingContextManagerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingContextManagerService.h; sourceTree = "<group>"; };
+		09C586E5247A007E00426E66 /* FIRMessagingPubSubRegistrar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingPubSubRegistrar.h; sourceTree = "<group>"; };
+		09C586E6247A007E00426E66 /* FIRMessagingPubSub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingPubSub.h; sourceTree = "<group>"; };
+		09C586E7247A007E00426E66 /* FIRMessagingPacketQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingPacketQueue.h; sourceTree = "<group>"; };
+		09C586E8247A007E00426E66 /* FIRMessagingCodedInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingCodedInputStream.m; sourceTree = "<group>"; };
+		09C586E9247A007E00426E66 /* FIRMessagingLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingLogger.m; sourceTree = "<group>"; };
+		09C586EA247A007E00426E66 /* FIRMessaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessaging.m; sourceTree = "<group>"; };
+		09C586EB247A007E00426E66 /* FIRMessagingUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingUtilities.h; sourceTree = "<group>"; };
+		09C586EC247A007E00426E66 /* FIRMessagingPendingTopicsList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingPendingTopicsList.m; sourceTree = "<group>"; };
+		09C586ED247A007E00426E66 /* FIRMessagingDataMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingDataMessageManager.h; sourceTree = "<group>"; };
+		09C586EE247A007E00426E66 /* FIRMessagingReceiver.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingReceiver.m; sourceTree = "<group>"; };
+		09C586EF247A007E00426E66 /* FIRMessagingPersistentSyncMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingPersistentSyncMessage.m; sourceTree = "<group>"; };
+		09C586F0247A007E00426E66 /* NSDictionary+FIRMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FIRMessaging.h"; sourceTree = "<group>"; };
+		09C586F2247A007E00426E66 /* FirebaseMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseMessaging.h; sourceTree = "<group>"; };
+		09C586F3247A007E00426E66 /* FIRMessagingExtensionHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingExtensionHelper.h; sourceTree = "<group>"; };
+		09C586F4247A007E00426E66 /* FIRMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessaging.h; sourceTree = "<group>"; };
+		09C586F5247A007E00426E66 /* FIRMessagingRemoteNotificationsProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingRemoteNotificationsProxy.h; sourceTree = "<group>"; };
+		09C586F6247A007E00426E66 /* FIRMessagingClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingClient.m; sourceTree = "<group>"; };
+		09C586F7247A007E00426E66 /* FIRMessagingConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingConnection.m; sourceTree = "<group>"; };
+		09C586F8247A007E00426E66 /* FIRMessagingAnalytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingAnalytics.h; sourceTree = "<group>"; };
+		09C586F9247A007E00426E66 /* FIRMessagingTopicsCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingTopicsCommon.h; sourceTree = "<group>"; };
+		09C586FA247A007E00426E66 /* FirebaseMessaging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirebaseMessaging.h; sourceTree = "<group>"; };
+		09C586FB247A007E00426E66 /* NSError+FIRMessaging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSError+FIRMessaging.m"; sourceTree = "<group>"; };
+		09C586FC247A007E00426E66 /* FIRMessagingDelayedMessageQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingDelayedMessageQueue.m; sourceTree = "<group>"; };
+		09C586FD247A007E00426E66 /* FIRMessagingTopicOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingTopicOperation.m; sourceTree = "<group>"; };
+		09C586FE247A007E00426E66 /* FIRMessagingSecureSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingSecureSocket.h; sourceTree = "<group>"; };
+		09C586FF247A007E00426E66 /* FIRMessagingSyncMessageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingSyncMessageManager.h; sourceTree = "<group>"; };
+		09C58700247A007E00426E66 /* FIRMessagingDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingDefines.h; sourceTree = "<group>"; };
+		09C58701247A007E00426E66 /* FIRMessagingConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingConstants.h; sourceTree = "<group>"; };
+		09C58702247A007E00426E66 /* FIRMessagingCodedInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingCodedInputStream.h; sourceTree = "<group>"; };
+		09C58703247A007E00426E66 /* FIRMessaging_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessaging_Private.h; sourceTree = "<group>"; };
+		09C58704247A007E00426E66 /* FIRMessagingPacketQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingPacketQueue.m; sourceTree = "<group>"; };
+		09C58705247A007E00426E66 /* FIRMessagingPubSub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingPubSub.m; sourceTree = "<group>"; };
+		09C58706247A007E00426E66 /* FIRMessagingContextManagerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingContextManagerService.m; sourceTree = "<group>"; };
+		09C58707247A007E00426E66 /* FIRMessagingVersionUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingVersionUtilities.h; sourceTree = "<group>"; };
+		09C58708247A007E00426E66 /* FIRMessagingPubSubRegistrar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingPubSubRegistrar.m; sourceTree = "<group>"; };
+		09C58709247A007E00426E66 /* FIRMessagingRmqManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingRmqManager.h; sourceTree = "<group>"; };
+		09C5870A247A007E00426E66 /* FIRMessagingReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingReceiver.h; sourceTree = "<group>"; };
+		09C5870B247A007E00426E66 /* FIRMessagingDataMessageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingDataMessageManager.m; sourceTree = "<group>"; };
+		09C5870C247A007E00426E66 /* FIRMessagingPendingTopicsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingPendingTopicsList.h; sourceTree = "<group>"; };
+		09C5870D247A007E00426E66 /* FIRMessagingUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FIRMessagingUtilities.m; sourceTree = "<group>"; };
+		09C5870E247A007E00426E66 /* FIRMessagingLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRMessagingLogger.h; sourceTree = "<group>"; };
+		09C58710247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58714247A007E00426E66 /* GULUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULUserDefaults.h; sourceTree = "<group>"; };
+		09C58715247A007E00426E66 /* GULUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULUserDefaults.m; sourceTree = "<group>"; };
+		09C58717247A007E00426E66 /* GULSwizzler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULSwizzler.m; sourceTree = "<group>"; };
+		09C58719247A007E00426E66 /* GULSwizzler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULSwizzler.h; sourceTree = "<group>"; };
+		09C5871A247A007E00426E66 /* GULOriginalIMPConvenienceMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULOriginalIMPConvenienceMacros.h; sourceTree = "<group>"; };
+		09C5871C247A007E00426E66 /* GULLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULLogger.m; sourceTree = "<group>"; };
+		09C5871E247A007E00426E66 /* GULLoggerLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULLoggerLevel.h; sourceTree = "<group>"; };
+		09C58720247A007E00426E66 /* GULLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULLogger.h; sourceTree = "<group>"; };
+		09C58721247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58723247A007E00426E66 /* GULNetworkConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULNetworkConstants.m; sourceTree = "<group>"; };
+		09C58725247A007E00426E66 /* GULNetworkMessageCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULNetworkMessageCode.h; sourceTree = "<group>"; };
+		09C58726247A007E00426E66 /* GULMutableDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULMutableDictionary.h; sourceTree = "<group>"; };
+		09C58727247A007E00426E66 /* GULNetworkURLSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULNetworkURLSession.h; sourceTree = "<group>"; };
+		09C58728247A007E00426E66 /* GULNetworkLoggerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULNetworkLoggerProtocol.h; sourceTree = "<group>"; };
+		09C58729247A007E00426E66 /* GULNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULNetwork.h; sourceTree = "<group>"; };
+		09C5872A247A007E00426E66 /* GULNetworkConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULNetworkConstants.h; sourceTree = "<group>"; };
+		09C5872B247A007E00426E66 /* GULMutableDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULMutableDictionary.m; sourceTree = "<group>"; };
+		09C5872C247A007E00426E66 /* GULNetworkURLSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULNetworkURLSession.m; sourceTree = "<group>"; };
+		09C5872D247A007E00426E66 /* GULNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULNetwork.m; sourceTree = "<group>"; };
+		09C5872F247A007E00426E66 /* GULSceneDelegateSwizzler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULSceneDelegateSwizzler.m; sourceTree = "<group>"; };
+		09C58731247A007E00426E66 /* GULSceneDelegateSwizzler_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULSceneDelegateSwizzler_Private.h; sourceTree = "<group>"; };
+		09C58733247A007E00426E66 /* GULSceneDelegateSwizzler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULSceneDelegateSwizzler.h; sourceTree = "<group>"; };
+		09C58735247A007E00426E66 /* GULLoggerCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULLoggerCodes.h; sourceTree = "<group>"; };
+		09C58737247A007E00426E66 /* GULReachabilityChecker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULReachabilityChecker.m; sourceTree = "<group>"; };
+		09C58738247A007E00426E66 /* GULReachabilityChecker+Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GULReachabilityChecker+Internal.h"; sourceTree = "<group>"; };
+		09C5873A247A007E00426E66 /* GULReachabilityMessageCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULReachabilityMessageCode.h; sourceTree = "<group>"; };
+		09C5873B247A007E00426E66 /* GULReachabilityChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULReachabilityChecker.h; sourceTree = "<group>"; };
+		09C5873E247A007E00426E66 /* GULAppDelegateSwizzler_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULAppDelegateSwizzler_Private.h; sourceTree = "<group>"; };
+		09C58740247A007E00426E66 /* GULApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULApplication.h; sourceTree = "<group>"; };
+		09C58741247A007E00426E66 /* GULAppDelegateSwizzler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULAppDelegateSwizzler.h; sourceTree = "<group>"; };
+		09C58742247A007E00426E66 /* GULAppDelegateSwizzler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULAppDelegateSwizzler.m; sourceTree = "<group>"; };
+		09C58744247A007E00426E66 /* GULSecureCoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULSecureCoding.m; sourceTree = "<group>"; };
+		09C58746247A007E00426E66 /* GULKeychainUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULKeychainUtils.m; sourceTree = "<group>"; };
+		09C58747247A007E00426E66 /* GULKeychainStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULKeychainStorage.m; sourceTree = "<group>"; };
+		09C58748247A007E00426E66 /* GULHeartbeatDateStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULHeartbeatDateStorage.m; sourceTree = "<group>"; };
+		09C5874A247A007E00426E66 /* GULAppEnvironmentUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULAppEnvironmentUtil.h; sourceTree = "<group>"; };
+		09C5874B247A007E00426E66 /* GULAppEnvironmentUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GULAppEnvironmentUtil.m; sourceTree = "<group>"; };
+		09C5874D247A007E00426E66 /* GULHeartbeatDateStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULHeartbeatDateStorage.h; sourceTree = "<group>"; };
+		09C5874E247A007E00426E66 /* GULKeychainStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULKeychainStorage.h; sourceTree = "<group>"; };
+		09C5874F247A007E00426E66 /* GULSecureCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULSecureCoding.h; sourceTree = "<group>"; };
+		09C58750247A007E00426E66 /* GULKeychainUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GULKeychainUtils.h; sourceTree = "<group>"; };
+		09C58752247A007E00426E66 /* GULNSData+zlib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GULNSData+zlib.m"; sourceTree = "<group>"; };
+		09C58753247A007E00426E66 /* GULNSData+zlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GULNSData+zlib.h"; sourceTree = "<group>"; };
+		09C58755247A007E00426E66 /* pb_common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
+		09C58756247A007E00426E66 /* pb_decode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
+		09C58757247A007E00426E66 /* pb_encode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
+		09C58758247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58759247A007E00426E66 /* pb_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
+		09C5875A247A007E00426E66 /* pb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		09C5875B247A007E00426E66 /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		09C5875C247A007E00426E66 /* pb_encode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		09C5875D247A007E00426E66 /* pb_decode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
+		09C58760247A007E00426E66 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		09C58762247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C58763247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C58765247A007E00426E66 /* GPBType.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBType.pbobjc.m; sourceTree = "<group>"; };
+		09C58766247A007E00426E66 /* GPBCodedOutputStream_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedOutputStream_PackagePrivate.h; sourceTree = "<group>"; };
+		09C58767247A007E00426E66 /* GPBArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBArray.h; sourceTree = "<group>"; };
+		09C58768247A007E00426E66 /* GPBAny.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBAny.pbobjc.h; sourceTree = "<group>"; };
+		09C58769247A007E00426E66 /* GPBExtensionRegistry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionRegistry.m; sourceTree = "<group>"; };
+		09C5876A247A007E00426E66 /* GPBRootObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBRootObject.m; sourceTree = "<group>"; };
+		09C5876B247A007E00426E66 /* GPBDescriptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBDescriptor.m; sourceTree = "<group>"; };
+		09C5876C247A007E00426E66 /* GPBMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBMessage.m; sourceTree = "<group>"; };
+		09C5876D247A007E00426E66 /* GPBEmpty.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBEmpty.pbobjc.m; sourceTree = "<group>"; };
+		09C5876E247A007E00426E66 /* GPBProtocolBuffers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBProtocolBuffers.h; sourceTree = "<group>"; };
+		09C5876F247A007E00426E66 /* GPBWireFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBWireFormat.m; sourceTree = "<group>"; };
+		09C58770247A007E00426E66 /* GPBFieldMask.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBFieldMask.pbobjc.h; sourceTree = "<group>"; };
+		09C58771247A007E00426E66 /* GPBUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBUtilities.m; sourceTree = "<group>"; };
+		09C58772247A007E00426E66 /* GPBDuration.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDuration.pbobjc.h; sourceTree = "<group>"; };
+		09C58773247A007E00426E66 /* GPBExtensionInternals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBExtensionInternals.m; sourceTree = "<group>"; };
+		09C58774247A007E00426E66 /* GPBUnknownFieldSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBUnknownFieldSet.m; sourceTree = "<group>"; };
+		09C58775247A007E00426E66 /* GPBDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDictionary.h; sourceTree = "<group>"; };
+		09C58776247A007E00426E66 /* GPBCodedOutputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedOutputStream.h; sourceTree = "<group>"; };
+		09C58777247A007E00426E66 /* GPBStruct.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBStruct.pbobjc.m; sourceTree = "<group>"; };
+		09C58778247A007E00426E66 /* GPBRootObject_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBRootObject_PackagePrivate.h; sourceTree = "<group>"; };
+		09C5877B247A007E00426E66 /* Api.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Api.pbobjc.h; sourceTree = "<group>"; };
+		09C5877C247A007E00426E66 /* SourceContext.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceContext.pbobjc.h; sourceTree = "<group>"; };
+		09C5877D247A007E00426E66 /* Duration.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Duration.pbobjc.h; sourceTree = "<group>"; };
+		09C5877E247A007E00426E66 /* Empty.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Empty.pbobjc.h; sourceTree = "<group>"; };
+		09C5877F247A007E00426E66 /* Wrappers.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wrappers.pbobjc.h; sourceTree = "<group>"; };
+		09C58780247A007E00426E66 /* Struct.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Struct.pbobjc.h; sourceTree = "<group>"; };
+		09C58781247A007E00426E66 /* FieldMask.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FieldMask.pbobjc.h; sourceTree = "<group>"; };
+		09C58782247A007E00426E66 /* Timestamp.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timestamp.pbobjc.h; sourceTree = "<group>"; };
+		09C58783247A007E00426E66 /* Type.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Type.pbobjc.h; sourceTree = "<group>"; };
+		09C58784247A007E00426E66 /* Any.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Any.pbobjc.h; sourceTree = "<group>"; };
+		09C58785247A007E00426E66 /* GPBUtilities_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUtilities_PackagePrivate.h; sourceTree = "<group>"; };
+		09C58786247A007E00426E66 /* GPBTimestamp.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBTimestamp.pbobjc.m; sourceTree = "<group>"; };
+		09C58787247A007E00426E66 /* GPBCodedInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBCodedInputStream.m; sourceTree = "<group>"; };
+		09C58788247A007E00426E66 /* GPBWrappers.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBWrappers.pbobjc.h; sourceTree = "<group>"; };
+		09C58789247A007E00426E66 /* GPBApi.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBApi.pbobjc.m; sourceTree = "<group>"; };
+		09C5878A247A007E00426E66 /* GPBWellKnownTypes.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBWellKnownTypes.m; sourceTree = "<group>"; };
+		09C5878B247A007E00426E66 /* GPBUnknownField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBUnknownField.m; sourceTree = "<group>"; };
+		09C5878C247A007E00426E66 /* GPBSourceContext.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBSourceContext.pbobjc.m; sourceTree = "<group>"; };
+		09C5878D247A007E00426E66 /* GPBDescriptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor.h; sourceTree = "<group>"; };
+		09C5878E247A007E00426E66 /* GPBCodedInputStream_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream_PackagePrivate.h; sourceTree = "<group>"; };
+		09C5878F247A007E00426E66 /* GPBRootObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBRootObject.h; sourceTree = "<group>"; };
+		09C58790247A007E00426E66 /* GPBBootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBBootstrap.h; sourceTree = "<group>"; };
+		09C58791247A007E00426E66 /* GPBExtensionRegistry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBExtensionRegistry.h; sourceTree = "<group>"; };
+		09C58792247A007E00426E66 /* GPBArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBArray.m; sourceTree = "<group>"; };
+		09C58793247A007E00426E66 /* GPBAny.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBAny.pbobjc.m; sourceTree = "<group>"; };
+		09C58794247A007E00426E66 /* GPBType.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBType.pbobjc.h; sourceTree = "<group>"; };
+		09C58795247A007E00426E66 /* GPBRuntimeTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBRuntimeTypes.h; sourceTree = "<group>"; };
+		09C58796247A007E00426E66 /* GPBFieldMask.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBFieldMask.pbobjc.m; sourceTree = "<group>"; };
+		09C58797247A007E00426E66 /* GPBUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUtilities.h; sourceTree = "<group>"; };
+		09C58798247A007E00426E66 /* GPBDuration.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBDuration.pbobjc.m; sourceTree = "<group>"; };
+		09C58799247A007E00426E66 /* GPBMessage_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBMessage_PackagePrivate.h; sourceTree = "<group>"; };
+		09C5879A247A007E00426E66 /* GPBWireFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBWireFormat.h; sourceTree = "<group>"; };
+		09C5879B247A007E00426E66 /* GPBArray_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBArray_PackagePrivate.h; sourceTree = "<group>"; };
+		09C5879C247A007E00426E66 /* GPBEmpty.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBEmpty.pbobjc.h; sourceTree = "<group>"; };
+		09C5879D247A007E00426E66 /* GPBMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBMessage.h; sourceTree = "<group>"; };
+		09C5879E247A007E00426E66 /* GPBProtocolBuffers_RuntimeSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBProtocolBuffers_RuntimeSupport.h; sourceTree = "<group>"; };
+		09C5879F247A007E00426E66 /* GPBApi.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBApi.pbobjc.h; sourceTree = "<group>"; };
+		09C587A0247A007E00426E66 /* GPBWrappers.pbobjc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBWrappers.pbobjc.m; sourceTree = "<group>"; };
+		09C587A1247A007E00426E66 /* GPBCodedInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBCodedInputStream.h; sourceTree = "<group>"; };
+		09C587A2247A007E00426E66 /* GPBDescriptor_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDescriptor_PackagePrivate.h; sourceTree = "<group>"; };
+		09C587A3247A007E00426E66 /* GPBTimestamp.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBTimestamp.pbobjc.h; sourceTree = "<group>"; };
+		09C587A4247A007E00426E66 /* GPBStruct.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBStruct.pbobjc.h; sourceTree = "<group>"; };
+		09C587A5247A007E00426E66 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBCodedOutputStream.m; sourceTree = "<group>"; };
+		09C587A6247A007E00426E66 /* GPBDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPBDictionary.m; sourceTree = "<group>"; };
+		09C587A7247A007E00426E66 /* GPBUnknownFieldSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUnknownFieldSet.h; sourceTree = "<group>"; };
+		09C587A8247A007E00426E66 /* GPBExtensionInternals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBExtensionInternals.h; sourceTree = "<group>"; };
+		09C587A9247A007E00426E66 /* GPBSourceContext.pbobjc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBSourceContext.pbobjc.h; sourceTree = "<group>"; };
+		09C587AA247A007E00426E66 /* GPBUnknownField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUnknownField.h; sourceTree = "<group>"; };
+		09C587AB247A007E00426E66 /* GPBUnknownFieldSet_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUnknownFieldSet_PackagePrivate.h; sourceTree = "<group>"; };
+		09C587AC247A007E00426E66 /* GPBWellKnownTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBWellKnownTypes.h; sourceTree = "<group>"; };
+		09C587AD247A007E00426E66 /* GPBUnknownField_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBUnknownField_PackagePrivate.h; sourceTree = "<group>"; };
+		09C587AE247A007E00426E66 /* GPBDictionary_PackagePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPBDictionary_PackagePrivate.h; sourceTree = "<group>"; };
+		09C587B0247A007E00426E66 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		09C587B4247A007E00426E66 /* FIRInteropParameterNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInteropParameterNames.h; sourceTree = "<group>"; };
+		09C587B5247A007E00426E66 /* FIRAnalyticsInterop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRAnalyticsInterop.h; sourceTree = "<group>"; };
+		09C587B6247A007E00426E66 /* FIRAnalyticsInteropListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRAnalyticsInteropListener.h; sourceTree = "<group>"; };
+		09C587B7247A007E00426E66 /* FIRInteropEventNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FIRInteropEventNames.h; sourceTree = "<group>"; };
+		09C587B8247A007E00426E66 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09C587C3247A051C00426E66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		09C587EE247A08A500426E66 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
+		09C587F5247A1DEF00426E66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		09C5880A247A1DFC00426E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		09C5880B247A1E3800426E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		09F2F46E2479FEE60066B6FD /* flutter_push_notifications.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = flutter_push_notifications.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		3B80C3931E831B6300D905FE /* App.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = App.framework; path = Flutter/App.framework; sourceTree = "<group>"; };
-		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
-		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FE9C3FD4756C36666D4A521 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		632BDC13CCCEA21D6D7E7548 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
+		7D991E2DF3EC27FEE3432C60 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
 		9740EEBA1CF902C7004384FC /* Flutter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Flutter.framework; path = Flutter/Flutter.framework; sourceTree = "<group>"; };
@@ -50,6 +628,7 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AC3FEC21B60752C6240C46E /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +636,1332 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09C587C0247A00D700426E66 /* Pods_Runner.framework in Frameworks */,
 				9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */,
 				3B80C3941E831B6300D905FE /* App.framework in Frameworks */,
+				470B1BA801641CB93323B873 /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09C5857A247A007D00426E66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09C5857B247A007D00426E66 /* Pods.xcodeproj */,
+				09C5857E247A007D00426E66 /* FirebaseCoreDiagnosticsInterop */,
+				09C58586247A007D00426E66 /* FirebaseCore */,
+				09C585B6247A007E00426E66 /* PromisesObjC */,
+				09C585E4247A007E00426E66 /* GoogleDataTransport */,
+				09C58614247A007E00426E66 /* GoogleDataTransportCCTSupport */,
+				09C58629247A007E00426E66 /* Target Support Files */,
+				09C5863E247A007E00426E66 /* Manifest.lock */,
+				09C5863F247A007E00426E66 /* FirebaseInstanceID */,
+				09C5867E247A007E00426E66 /* Local Podspecs */,
+				09C58681247A007E00426E66 /* FirebaseCoreDiagnostics */,
+				09C5868C247A007E00426E66 /* FirebaseInstallations */,
+				09C586BD247A007E00426E66 /* Firebase */,
+				09C586C4247A007E00426E66 /* Headers */,
+				09C586C5247A007E00426E66 /* FirebaseAnalytics */,
+				09C586C9247A007E00426E66 /* FirebaseMessaging */,
+				09C5870F247A007E00426E66 /* GoogleUtilities */,
+				09C58754247A007E00426E66 /* nanopb */,
+				09C5875E247A007E00426E66 /* GoogleAppMeasurement */,
+				09C58761247A007E00426E66 /* Protobuf */,
+				09C587AF247A007E00426E66 /* FirebaseAnalyticsInterop */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		09C5857C247A007D00426E66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09C587D8247A051C00426E66 /* FirebaseCore.framework */,
+				09C587DA247A051C00426E66 /* FirebaseCoreDiagnostics.framework */,
+				09C587DC247A051C00426E66 /* FirebaseInstallations.framework */,
+				09C587DE247A051C00426E66 /* FirebaseInstanceID.framework */,
+				09C587E0247A051C00426E66 /* FirebaseMessaging.framework */,
+				09C587BD247A007E00426E66 /* flutter_push_notifications.framework */,
+				09C587E2247A051C00426E66 /* GoogleDataTransport.framework */,
+				09C587E4247A051C00426E66 /* GoogleDataTransportCCTSupport.framework */,
+				09C587E6247A051C00426E66 /* GoogleUtilities.framework */,
+				09C587E8247A051C00426E66 /* nanopb.framework */,
+				09C587BF247A007E00426E66 /* Pods_Runner.framework */,
+				09C587EA247A051C00426E66 /* FBLPromises.framework */,
+				09C587EC247A051C00426E66 /* Protobuf.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09C5857E247A007D00426E66 /* FirebaseCoreDiagnosticsInterop */ = {
+			isa = PBXGroup;
+			children = (
+				09C5857F247A007D00426E66 /* LICENSE */,
+				09C58580247A007D00426E66 /* Interop */,
+				09C58585247A007D00426E66 /* README.md */,
+			);
+			path = FirebaseCoreDiagnosticsInterop;
+			sourceTree = "<group>";
+		};
+		09C58580247A007D00426E66 /* Interop */ = {
+			isa = PBXGroup;
+			children = (
+				09C58581247A007D00426E66 /* CoreDiagnostics */,
+			);
+			path = Interop;
+			sourceTree = "<group>";
+		};
+		09C58581247A007D00426E66 /* CoreDiagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				09C58582247A007D00426E66 /* Public */,
+			);
+			path = CoreDiagnostics;
+			sourceTree = "<group>";
+		};
+		09C58582247A007D00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C58583247A007D00426E66 /* FIRCoreDiagnosticsData.h */,
+				09C58584247A007D00426E66 /* FIRCoreDiagnosticsInterop.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C58586247A007D00426E66 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				09C58587247A007D00426E66 /* FirebaseCore */,
+				09C585B3247A007E00426E66 /* LICENSE */,
+				09C585B4247A007E00426E66 /* README.md */,
+				09C585B5247A007E00426E66 /* Firebase */,
+			);
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		09C58587247A007D00426E66 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				09C58588247A007D00426E66 /* Sources */,
+			);
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		09C58588247A007D00426E66 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09C58589247A007D00426E66 /* FIRErrors.m */,
+				09C5858A247A007D00426E66 /* FIRConfiguration.m */,
+				09C5858B247A007D00426E66 /* FIRApp.m */,
+				09C5858C247A007D00426E66 /* FIROptions.m */,
+				09C5858D247A007D00426E66 /* FIRAppAssociationRegistration.m */,
+				09C5858E247A007D00426E66 /* FIRComponent.m */,
+				09C5858F247A007D00426E66 /* FIRBundleUtil.h */,
+				09C58590247A007D00426E66 /* FIRAnalyticsConfiguration.m */,
+				09C58591247A007D00426E66 /* FIRVersion.m */,
+				09C58592247A007D00426E66 /* FIRCoreDiagnosticsConnector.m */,
+				09C58593247A007D00426E66 /* Public */,
+				09C58599247A007E00426E66 /* Private */,
+				09C585AB247A007E00426E66 /* FIRComponentContainer.m */,
+				09C585AC247A007E00426E66 /* FIRComponentType.m */,
+				09C585AD247A007E00426E66 /* FIRLogger.m */,
+				09C585AE247A007E00426E66 /* FIRBundleUtil.m */,
+				09C585AF247A007E00426E66 /* FIRDiagnosticsData.m */,
+				09C585B0247A007E00426E66 /* FIRHeartbeatInfo.m */,
+				09C585B1247A007E00426E66 /* FIRVersion.h */,
+				09C585B2247A007E00426E66 /* FIRDependency.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		09C58593247A007D00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C58594247A007E00426E66 /* FIRConfiguration.h */,
+				09C58595247A007E00426E66 /* FIROptions.h */,
+				09C58596247A007E00426E66 /* FIRApp.h */,
+				09C58597247A007E00426E66 /* FIRLoggerLevel.h */,
+				09C58598247A007E00426E66 /* FirebaseCore.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C58599247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C5859A247A007E00426E66 /* FIRComponentContainer.h */,
+				09C5859B247A007E00426E66 /* FIROptionsInternal.h */,
+				09C5859C247A007E00426E66 /* FIRLogger.h */,
+				09C5859D247A007E00426E66 /* FIRAppInternal.h */,
+				09C5859E247A007E00426E66 /* FIRComponentType.h */,
+				09C5859F247A007E00426E66 /* FIRDiagnosticsData.h */,
+				09C585A0247A007E00426E66 /* FIRDependency.h */,
+				09C585A1247A007E00426E66 /* FIRHeartbeatInfo.h */,
+				09C585A2247A007E00426E66 /* FIRErrorCode.h */,
+				09C585A3247A007E00426E66 /* FIRConfigurationInternal.h */,
+				09C585A4247A007E00426E66 /* FIRErrors.h */,
+				09C585A5247A007E00426E66 /* FIRComponent.h */,
+				09C585A6247A007E00426E66 /* FIRAppAssociationRegistration.h */,
+				09C585A7247A007E00426E66 /* FIRAnalyticsConfiguration.h */,
+				09C585A8247A007E00426E66 /* FIRComponentContainerInternal.h */,
+				09C585A9247A007E00426E66 /* FIRLibrary.h */,
+				09C585AA247A007E00426E66 /* FIRCoreDiagnosticsConnector.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C585B5247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C585B6247A007E00426E66 /* PromisesObjC */ = {
+			isa = PBXGroup;
+			children = (
+				09C585B7247A007E00426E66 /* LICENSE */,
+				09C585B8247A007E00426E66 /* README.md */,
+				09C585B9247A007E00426E66 /* Sources */,
+			);
+			path = PromisesObjC;
+			sourceTree = "<group>";
+		};
+		09C585B9247A007E00426E66 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09C585BA247A007E00426E66 /* FBLPromises */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		09C585BA247A007E00426E66 /* FBLPromises */ = {
+			isa = PBXGroup;
+			children = (
+				09C585BB247A007E00426E66 /* FBLPromise+Await.m */,
+				09C585BC247A007E00426E66 /* FBLPromise+Retry.m */,
+				09C585BD247A007E00426E66 /* FBLPromise+Do.m */,
+				09C585BE247A007E00426E66 /* FBLPromise+Delay.m */,
+				09C585BF247A007E00426E66 /* include */,
+				09C585D5247A007E00426E66 /* FBLPromise+Then.m */,
+				09C585D6247A007E00426E66 /* FBLPromiseError.m */,
+				09C585D7247A007E00426E66 /* FBLPromise+Timeout.m */,
+				09C585D8247A007E00426E66 /* FBLPromise+Any.m */,
+				09C585D9247A007E00426E66 /* FBLPromise+Async.m */,
+				09C585DA247A007E00426E66 /* FBLPromise+Always.m */,
+				09C585DB247A007E00426E66 /* FBLPromise+Catch.m */,
+				09C585DC247A007E00426E66 /* FBLPromise+Reduce.m */,
+				09C585DD247A007E00426E66 /* FBLPromise+Testing.m */,
+				09C585DE247A007E00426E66 /* FBLPromise+Recover.m */,
+				09C585DF247A007E00426E66 /* FBLPromise+Race.m */,
+				09C585E0247A007E00426E66 /* FBLPromise+All.m */,
+				09C585E1247A007E00426E66 /* FBLPromise+Validate.m */,
+				09C585E2247A007E00426E66 /* FBLPromise.m */,
+				09C585E3247A007E00426E66 /* FBLPromise+Wrap.m */,
+			);
+			path = FBLPromises;
+			sourceTree = "<group>";
+		};
+		09C585BF247A007E00426E66 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				09C585C0247A007E00426E66 /* FBLPromise+Testing.h */,
+				09C585C1247A007E00426E66 /* FBLPromise+Reduce.h */,
+				09C585C2247A007E00426E66 /* FBLPromise+Catch.h */,
+				09C585C3247A007E00426E66 /* FBLPromise+Recover.h */,
+				09C585C4247A007E00426E66 /* FBLPromise+Validate.h */,
+				09C585C5247A007E00426E66 /* FBLPromise+All.h */,
+				09C585C6247A007E00426E66 /* FBLPromise+Race.h */,
+				09C585C7247A007E00426E66 /* FBLPromise+Wrap.h */,
+				09C585C8247A007E00426E66 /* FBLPromise.h */,
+				09C585C9247A007E00426E66 /* FBLPromises.h */,
+				09C585CA247A007E00426E66 /* FBLPromisePrivate.h */,
+				09C585CB247A007E00426E66 /* FBLPromise+Retry.h */,
+				09C585CC247A007E00426E66 /* FBLPromise+Await.h */,
+				09C585CD247A007E00426E66 /* FBLPromise+Delay.h */,
+				09C585CE247A007E00426E66 /* FBLPromise+Do.h */,
+				09C585CF247A007E00426E66 /* FBLPromise+Timeout.h */,
+				09C585D0247A007E00426E66 /* FBLPromiseError.h */,
+				09C585D1247A007E00426E66 /* FBLPromise+Then.h */,
+				09C585D2247A007E00426E66 /* FBLPromise+Async.h */,
+				09C585D3247A007E00426E66 /* FBLPromise+Always.h */,
+				09C585D4247A007E00426E66 /* FBLPromise+Any.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		09C585E4247A007E00426E66 /* GoogleDataTransport */ = {
+			isa = PBXGroup;
+			children = (
+				09C585E5247A007E00426E66 /* LICENSE */,
+				09C585E6247A007E00426E66 /* GoogleDataTransport */,
+				09C58613247A007E00426E66 /* README.md */,
+			);
+			path = GoogleDataTransport;
+			sourceTree = "<group>";
+		};
+		09C585E6247A007E00426E66 /* GoogleDataTransport */ = {
+			isa = PBXGroup;
+			children = (
+				09C585E7247A007E00426E66 /* GDTCORLibrary */,
+			);
+			path = GoogleDataTransport;
+			sourceTree = "<group>";
+		};
+		09C585E7247A007E00426E66 /* GDTCORLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				09C585E8247A007E00426E66 /* GDTCORAssert.m */,
+				09C585E9247A007E00426E66 /* GDTCORLifecycle.m */,
+				09C585EA247A007E00426E66 /* GDTCORUploadCoordinator.m */,
+				09C585EB247A007E00426E66 /* GDTCORReachability.m */,
+				09C585EC247A007E00426E66 /* GDTCORUploadPackage.m */,
+				09C585ED247A007E00426E66 /* GDTCORFlatFileStorage.m */,
+				09C585EE247A007E00426E66 /* GDTCOREvent.m */,
+				09C585EF247A007E00426E66 /* GDTCORClock.m */,
+				09C585F0247A007E00426E66 /* Public */,
+				09C58602247A007E00426E66 /* GDTCORDataFuture.m */,
+				09C58603247A007E00426E66 /* Private */,
+				09C5860E247A007E00426E66 /* GDTCORTransformer.m */,
+				09C5860F247A007E00426E66 /* GDTCORRegistrar.m */,
+				09C58610247A007E00426E66 /* GDTCORTransport.m */,
+				09C58611247A007E00426E66 /* GDTCORPlatform.m */,
+				09C58612247A007E00426E66 /* GDTCORConsoleLogger.m */,
+			);
+			path = GDTCORLibrary;
+			sourceTree = "<group>";
+		};
+		09C585F0247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C585F1247A007E00426E66 /* GDTCORPrioritizer.h */,
+				09C585F2247A007E00426E66 /* GDTCORClock.h */,
+				09C585F3247A007E00426E66 /* GDTCORRegistrar.h */,
+				09C585F4247A007E00426E66 /* GDTCORTransport.h */,
+				09C585F5247A007E00426E66 /* GDTCORConsoleLogger.h */,
+				09C585F6247A007E00426E66 /* GDTCORPlatform.h */,
+				09C585F7247A007E00426E66 /* GDTCORStorageProtocol.h */,
+				09C585F8247A007E00426E66 /* GDTCORUploader.h */,
+				09C585F9247A007E00426E66 /* GDTCOREventTransformer.h */,
+				09C585FA247A007E00426E66 /* GDTCORAssert.h */,
+				09C585FB247A007E00426E66 /* GDTCORLifecycle.h */,
+				09C585FC247A007E00426E66 /* GoogleDataTransport.h */,
+				09C585FD247A007E00426E66 /* GDTCORTargets.h */,
+				09C585FE247A007E00426E66 /* GDTCORReachability.h */,
+				09C585FF247A007E00426E66 /* GDTCOREvent.h */,
+				09C58600247A007E00426E66 /* GDTCOREventDataObject.h */,
+				09C58601247A007E00426E66 /* GDTCORUploadPackage.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C58603247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58604247A007E00426E66 /* GDTCORDataFuture.h */,
+				09C58605247A007E00426E66 /* GDTCORReachability_Private.h */,
+				09C58606247A007E00426E66 /* GDTCORTransformer.h */,
+				09C58607247A007E00426E66 /* GDTCORUploadPackage_Private.h */,
+				09C58608247A007E00426E66 /* GDTCORRegistrar_Private.h */,
+				09C58609247A007E00426E66 /* GDTCORUploadCoordinator.h */,
+				09C5860A247A007E00426E66 /* GDTCORTransformer_Private.h */,
+				09C5860B247A007E00426E66 /* GDTCORTransport_Private.h */,
+				09C5860C247A007E00426E66 /* GDTCORFlatFileStorage.h */,
+				09C5860D247A007E00426E66 /* GDTCOREvent_Private.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58614247A007E00426E66 /* GoogleDataTransportCCTSupport */ = {
+			isa = PBXGroup;
+			children = (
+				09C58615247A007E00426E66 /* LICENSE */,
+				09C58616247A007E00426E66 /* GoogleDataTransport */,
+				09C58617247A007E00426E66 /* GoogleDataTransportCCTSupport */,
+				09C58628247A007E00426E66 /* README.md */,
+			);
+			path = GoogleDataTransportCCTSupport;
+			sourceTree = "<group>";
+		};
+		09C58616247A007E00426E66 /* GoogleDataTransport */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GoogleDataTransport;
+			sourceTree = "<group>";
+		};
+		09C58617247A007E00426E66 /* GoogleDataTransportCCTSupport */ = {
+			isa = PBXGroup;
+			children = (
+				09C58618247A007E00426E66 /* GDTCCTLibrary */,
+			);
+			path = GoogleDataTransportCCTSupport;
+			sourceTree = "<group>";
+		};
+		09C58618247A007E00426E66 /* GDTCCTLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				09C58619247A007E00426E66 /* GDTCCTPrioritizer.m */,
+				09C5861A247A007E00426E66 /* GDTCCTCompressionHelper.m */,
+				09C5861B247A007E00426E66 /* GDTCCTNanopbHelpers.m */,
+				09C5861C247A007E00426E66 /* GDTCCTUploader.m */,
+				09C5861D247A007E00426E66 /* Private */,
+				09C58623247A007E00426E66 /* GDTCOREvent+NetworkConnectionInfo.m */,
+				09C58624247A007E00426E66 /* Protogen */,
+			);
+			path = GDTCCTLibrary;
+			sourceTree = "<group>";
+		};
+		09C5861D247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C5861E247A007E00426E66 /* GDTCCTUploader.h */,
+				09C5861F247A007E00426E66 /* GDTCOREvent+NetworkConnectionInfo.h */,
+				09C58620247A007E00426E66 /* GDTCCTPrioritizer.h */,
+				09C58621247A007E00426E66 /* GDTCCTCompressionHelper.h */,
+				09C58622247A007E00426E66 /* GDTCCTNanopbHelpers.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58624247A007E00426E66 /* Protogen */ = {
+			isa = PBXGroup;
+			children = (
+				09C58625247A007E00426E66 /* nanopb */,
+			);
+			path = Protogen;
+			sourceTree = "<group>";
+		};
+		09C58625247A007E00426E66 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				09C58626247A007E00426E66 /* cct.nanopb.h */,
+				09C58627247A007E00426E66 /* cct.nanopb.c */,
+			);
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		09C58629247A007E00426E66 /* Target Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09C5862A247A007E00426E66 /* Flutter */,
+				09C5862C247A007E00426E66 /* Pods-Runner */,
+				09C58637247A007E00426E66 /* flutter_push_notifications */,
+			);
+			path = "Target Support Files";
+			sourceTree = "<group>";
+		};
+		09C5862A247A007E00426E66 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				09C5862B247A007E00426E66 /* Flutter.xcconfig */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		09C5862C247A007E00426E66 /* Pods-Runner */ = {
+			isa = PBXGroup;
+			children = (
+				09C5862D247A007E00426E66 /* Pods-Runner-acknowledgements.plist */,
+				09C5862E247A007E00426E66 /* Pods-Runner-Info.plist */,
+				09C5862F247A007E00426E66 /* Pods-Runner.release.xcconfig */,
+				09C58630247A007E00426E66 /* Pods-Runner-acknowledgements.markdown */,
+				09C58631247A007E00426E66 /* Pods-Runner-umbrella.h */,
+				09C58632247A007E00426E66 /* Pods-Runner.modulemap */,
+				09C58633247A007E00426E66 /* Pods-Runner-frameworks.sh */,
+				09C58634247A007E00426E66 /* Pods-Runner.profile.xcconfig */,
+				09C58635247A007E00426E66 /* Pods-Runner-dummy.m */,
+				09C58636247A007E00426E66 /* Pods-Runner.debug.xcconfig */,
+			);
+			path = "Pods-Runner";
+			sourceTree = "<group>";
+		};
+		09C58637247A007E00426E66 /* flutter_push_notifications */ = {
+			isa = PBXGroup;
+			children = (
+				09C58638247A007E00426E66 /* flutter_push_notifications.modulemap */,
+				09C58639247A007E00426E66 /* flutter_push_notifications-umbrella.h */,
+				09C5863A247A007E00426E66 /* flutter_push_notifications.xcconfig */,
+				09C5863B247A007E00426E66 /* flutter_push_notifications-prefix.pch */,
+				09C5863C247A007E00426E66 /* flutter_push_notifications-dummy.m */,
+				09C5863D247A007E00426E66 /* flutter_push_notifications-Info.plist */,
+			);
+			path = flutter_push_notifications;
+			sourceTree = "<group>";
+		};
+		09C5863F247A007E00426E66 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				09C58640247A007E00426E66 /* LICENSE */,
+				09C58641247A007E00426E66 /* README.md */,
+				09C58642247A007E00426E66 /* Firebase */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		09C58642247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				09C58643247A007E00426E66 /* InstanceID */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C58643247A007E00426E66 /* InstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				09C58644247A007E00426E66 /* FIRInstanceIDLogger.h */,
+				09C58645247A007E00426E66 /* FIRInstanceIDAuthService.h */,
+				09C58646247A007E00426E66 /* FIRInstanceIDCheckinService.m */,
+				09C58647247A007E00426E66 /* NSError+FIRInstanceID.h */,
+				09C58648247A007E00426E66 /* FIRInstanceIDBackupExcludedPlist.m */,
+				09C58649247A007E00426E66 /* FIRInstanceIDAPNSInfo.h */,
+				09C5864A247A007E00426E66 /* FIRInstanceIDTokenManager.m */,
+				09C5864B247A007E00426E66 /* FIRInstanceIDAuthKeyChain.h */,
+				09C5864C247A007E00426E66 /* FIRInstanceIDConstants.m */,
+				09C5864D247A007E00426E66 /* FIRInstanceIDTokenDeleteOperation.h */,
+				09C5864E247A007E00426E66 /* FIRInstanceIDCombinedHandler.m */,
+				09C5864F247A007E00426E66 /* FIRInstanceIDVersionUtilities.h */,
+				09C58650247A007E00426E66 /* FIRInstanceIDTokenInfo.h */,
+				09C58651247A007E00426E66 /* FIRInstanceIDCheckinStore.m */,
+				09C58652247A007E00426E66 /* FIRInstanceID+Private.m */,
+				09C58653247A007E00426E66 /* FIRInstanceIDURLQueryItem.h */,
+				09C58654247A007E00426E66 /* FIRInstanceIDTokenFetchOperation.m */,
+				09C58655247A007E00426E66 /* FIRInstanceIDStore.h */,
+				09C58656247A007E00426E66 /* FIRInstanceIDTokenStore.h */,
+				09C58657247A007E00426E66 /* FIRInstanceIDTokenOperation.h */,
+				09C58658247A007E00426E66 /* FIRInstanceIDKeychain.h */,
+				09C58659247A007E00426E66 /* FIRInstanceIDUtilities.h */,
+				09C5865A247A007E00426E66 /* FIRInstanceIDCheckinPreferences+Internal.m */,
+				09C5865B247A007E00426E66 /* FIRInstanceIDTokenOperation+Private.h */,
+				09C5865C247A007E00426E66 /* FIRInstanceIDBackupExcludedPlist.h */,
+				09C5865D247A007E00426E66 /* NSError+FIRInstanceID.m */,
+				09C5865E247A007E00426E66 /* FIRInstanceIDAuthService.m */,
+				09C5865F247A007E00426E66 /* FIRInstanceIDCheckinService.h */,
+				09C58660247A007E00426E66 /* FIRInstanceIDDefines.h */,
+				09C58661247A007E00426E66 /* FIRInstanceIDLogger.m */,
+				09C58662247A007E00426E66 /* Public */,
+				09C58665247A007E00426E66 /* Private */,
+				09C58669247A007E00426E66 /* FIRInstanceIDVersionUtilities.m */,
+				09C5866A247A007E00426E66 /* FIRInstanceIDCombinedHandler.h */,
+				09C5866B247A007E00426E66 /* FIRInstanceIDConstants.h */,
+				09C5866C247A007E00426E66 /* FIRInstanceIDTokenDeleteOperation.m */,
+				09C5866D247A007E00426E66 /* FIRInstanceIDAuthKeyChain.m */,
+				09C5866E247A007E00426E66 /* FIRInstanceIDTokenManager.h */,
+				09C5866F247A007E00426E66 /* FIRInstanceIDAPNSInfo.m */,
+				09C58670247A007E00426E66 /* FIRInstanceIDCheckinPreferences_Private.h */,
+				09C58671247A007E00426E66 /* FIRInstanceIDStore.m */,
+				09C58672247A007E00426E66 /* FIRInstanceIDCheckinPreferences.m */,
+				09C58673247A007E00426E66 /* FIRInstanceIDTokenFetchOperation.h */,
+				09C58674247A007E00426E66 /* FIRInstanceIDURLQueryItem.m */,
+				09C58675247A007E00426E66 /* FIRInstanceIDCheckinStore.h */,
+				09C58676247A007E00426E66 /* FIRInstanceIDTokenInfo.m */,
+				09C58677247A007E00426E66 /* FIRInstanceID.m */,
+				09C58678247A007E00426E66 /* FIRInstanceIDUtilities.m */,
+				09C58679247A007E00426E66 /* FIRIMessageCode.h */,
+				09C5867A247A007E00426E66 /* FIRInstanceIDCheckinPreferences+Internal.h */,
+				09C5867B247A007E00426E66 /* FIRInstanceIDKeychain.m */,
+				09C5867C247A007E00426E66 /* FIRInstanceIDTokenOperation.m */,
+				09C5867D247A007E00426E66 /* FIRInstanceIDTokenStore.m */,
+			);
+			path = InstanceID;
+			sourceTree = "<group>";
+		};
+		09C58662247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C58663247A007E00426E66 /* FirebaseInstanceID.h */,
+				09C58664247A007E00426E66 /* FIRInstanceID.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C58665247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58666247A007E00426E66 /* FIRInstanceIDCheckinPreferences.h */,
+				09C58667247A007E00426E66 /* FIRInstanceID_Private.h */,
+				09C58668247A007E00426E66 /* FIRInstanceID+Private.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C5867E247A007E00426E66 /* Local Podspecs */ = {
+			isa = PBXGroup;
+			children = (
+				09C5867F247A007E00426E66 /* Flutter.podspec.json */,
+				09C58680247A007E00426E66 /* flutter_push_notifications.podspec.json */,
+			);
+			path = "Local Podspecs";
+			sourceTree = "<group>";
+		};
+		09C58681247A007E00426E66 /* FirebaseCoreDiagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				09C58682247A007E00426E66 /* LICENSE */,
+				09C58683247A007E00426E66 /* README.md */,
+				09C58684247A007E00426E66 /* Firebase */,
+			);
+			path = FirebaseCoreDiagnostics;
+			sourceTree = "<group>";
+		};
+		09C58684247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				09C58685247A007E00426E66 /* CoreDiagnostics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C58685247A007E00426E66 /* CoreDiagnostics */ = {
+			isa = PBXGroup;
+			children = (
+				09C58686247A007E00426E66 /* FIRCDLibrary */,
+			);
+			path = CoreDiagnostics;
+			sourceTree = "<group>";
+		};
+		09C58686247A007E00426E66 /* FIRCDLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				09C58687247A007E00426E66 /* FIRCoreDiagnostics.m */,
+				09C58688247A007E00426E66 /* Protogen */,
+			);
+			path = FIRCDLibrary;
+			sourceTree = "<group>";
+		};
+		09C58688247A007E00426E66 /* Protogen */ = {
+			isa = PBXGroup;
+			children = (
+				09C58689247A007E00426E66 /* nanopb */,
+			);
+			path = Protogen;
+			sourceTree = "<group>";
+		};
+		09C58689247A007E00426E66 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				09C5868A247A007E00426E66 /* firebasecore.nanopb.c */,
+				09C5868B247A007E00426E66 /* firebasecore.nanopb.h */,
+			);
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		09C5868C247A007E00426E66 /* FirebaseInstallations */ = {
+			isa = PBXGroup;
+			children = (
+				09C5868D247A007E00426E66 /* LICENSE */,
+				09C5868E247A007E00426E66 /* FirebaseInstallations */,
+				09C586BB247A007E00426E66 /* README.md */,
+				09C586BC247A007E00426E66 /* Firebase */,
+			);
+			path = FirebaseInstallations;
+			sourceTree = "<group>";
+		};
+		09C5868E247A007E00426E66 /* FirebaseInstallations */ = {
+			isa = PBXGroup;
+			children = (
+				09C5868F247A007E00426E66 /* Source */,
+			);
+			path = FirebaseInstallations;
+			sourceTree = "<group>";
+		};
+		09C5868F247A007E00426E66 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				09C58690247A007E00426E66 /* Library */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		09C58690247A007E00426E66 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				09C58691247A007E00426E66 /* InstallationsAPI */,
+				09C58696247A007E00426E66 /* FIRInstallationsLogger.h */,
+				09C58697247A007E00426E66 /* FIRInstallationsItem.h */,
+				09C58698247A007E00426E66 /* FIRInstallationsAuthTokenResultInternal.h */,
+				09C58699247A007E00426E66 /* FIRInstallationsAuthTokenResult.m */,
+				09C5869A247A007E00426E66 /* FIRInstallations.m */,
+				09C5869B247A007E00426E66 /* FIRInstallationsLogger.m */,
+				09C5869C247A007E00426E66 /* Public */,
+				09C586A2247A007E00426E66 /* FIRInstallationsItem.m */,
+				09C586A3247A007E00426E66 /* InstallationsIDController */,
+				09C586A9247A007E00426E66 /* Errors */,
+				09C586AE247A007E00426E66 /* InstallationsStore */,
+				09C586B5247A007E00426E66 /* FIRInstallationsVersion.m */,
+				09C586B6247A007E00426E66 /* IIDMigration */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		09C58691247A007E00426E66 /* InstallationsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				09C58692247A007E00426E66 /* FIRInstallationsAPIService.m */,
+				09C58693247A007E00426E66 /* FIRInstallationsItem+RegisterInstallationAPI.h */,
+				09C58694247A007E00426E66 /* FIRInstallationsItem+RegisterInstallationAPI.m */,
+				09C58695247A007E00426E66 /* FIRInstallationsAPIService.h */,
+			);
+			path = InstallationsAPI;
+			sourceTree = "<group>";
+		};
+		09C5869C247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C5869D247A007E00426E66 /* FIRInstallationsVersion.h */,
+				09C5869E247A007E00426E66 /* FIRInstallationsErrors.h */,
+				09C5869F247A007E00426E66 /* FirebaseInstallations.h */,
+				09C586A0247A007E00426E66 /* FIRInstallations.h */,
+				09C586A1247A007E00426E66 /* FIRInstallationsAuthTokenResult.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C586A3247A007E00426E66 /* InstallationsIDController */ = {
+			isa = PBXGroup;
+			children = (
+				09C586A4247A007E00426E66 /* FIRInstallationsSingleOperationPromiseCache.h */,
+				09C586A5247A007E00426E66 /* FIRInstallationsIDController.m */,
+				09C586A6247A007E00426E66 /* FIRInstallationsSingleOperationPromiseCache.m */,
+				09C586A7247A007E00426E66 /* FIRInstallationsIDController.h */,
+				09C586A8247A007E00426E66 /* FIRInstallationsStatus.h */,
+			);
+			path = InstallationsIDController;
+			sourceTree = "<group>";
+		};
+		09C586A9247A007E00426E66 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				09C586AA247A007E00426E66 /* FIRInstallationsHTTPError.h */,
+				09C586AB247A007E00426E66 /* FIRInstallationsErrorUtil.m */,
+				09C586AC247A007E00426E66 /* FIRInstallationsHTTPError.m */,
+				09C586AD247A007E00426E66 /* FIRInstallationsErrorUtil.h */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		09C586AE247A007E00426E66 /* InstallationsStore */ = {
+			isa = PBXGroup;
+			children = (
+				09C586AF247A007E00426E66 /* FIRInstallationsStore.h */,
+				09C586B0247A007E00426E66 /* FIRInstallationsStoredAuthToken.m */,
+				09C586B1247A007E00426E66 /* FIRInstallationsStoredItem.m */,
+				09C586B2247A007E00426E66 /* FIRInstallationsStore.m */,
+				09C586B3247A007E00426E66 /* FIRInstallationsStoredItem.h */,
+				09C586B4247A007E00426E66 /* FIRInstallationsStoredAuthToken.h */,
+			);
+			path = InstallationsStore;
+			sourceTree = "<group>";
+		};
+		09C586B6247A007E00426E66 /* IIDMigration */ = {
+			isa = PBXGroup;
+			children = (
+				09C586B7247A007E00426E66 /* FIRInstallationsIIDStore.m */,
+				09C586B8247A007E00426E66 /* FIRInstallationsIIDTokenStore.m */,
+				09C586B9247A007E00426E66 /* FIRInstallationsIIDStore.h */,
+				09C586BA247A007E00426E66 /* FIRInstallationsIIDTokenStore.h */,
+			);
+			path = IIDMigration;
+			sourceTree = "<group>";
+		};
+		09C586BC247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C586BD247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				09C586BE247A007E00426E66 /* LICENSE */,
+				09C586BF247A007E00426E66 /* CoreOnly */,
+				09C586C3247A007E00426E66 /* README.md */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C586BF247A007E00426E66 /* CoreOnly */ = {
+			isa = PBXGroup;
+			children = (
+				09C586C0247A007E00426E66 /* Sources */,
+			);
+			path = CoreOnly;
+			sourceTree = "<group>";
+		};
+		09C586C0247A007E00426E66 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09C586C1247A007E00426E66 /* Firebase.h */,
+				09C586C2247A007E00426E66 /* module.modulemap */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		09C586C4247A007E00426E66 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		09C586C5247A007E00426E66 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				09C586C6247A007E00426E66 /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		09C586C6247A007E00426E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C586C7247A007E00426E66 /* FirebaseAnalytics.framework */,
+				09C586C8247A007E00426E66 /* FIRAnalyticsConnector.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		09C586C9247A007E00426E66 /* FirebaseMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				09C586CA247A007E00426E66 /* LICENSE */,
+				09C586CB247A007E00426E66 /* README.md */,
+				09C586CC247A007E00426E66 /* Firebase */,
+				09C586CD247A007E00426E66 /* FirebaseMessaging */,
+			);
+			path = FirebaseMessaging;
+			sourceTree = "<group>";
+		};
+		09C586CC247A007E00426E66 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		09C586CD247A007E00426E66 /* FirebaseMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				09C586CE247A007E00426E66 /* Sources */,
+			);
+			path = FirebaseMessaging;
+			sourceTree = "<group>";
+		};
+		09C586CE247A007E00426E66 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				09C586CF247A007E00426E66 /* FIRMessagingRemoteNotificationsProxy.m */,
+				09C586D0247A007E00426E66 /* NSDictionary+FIRMessaging.m */,
+				09C586D1247A007E00426E66 /* FIRMessagingPersistentSyncMessage.h */,
+				09C586D2247A007E00426E66 /* Protos */,
+				09C586D7247A007E00426E66 /* FIRMessagingConstants.m */,
+				09C586D8247A007E00426E66 /* FIRMessagingSyncMessageManager.m */,
+				09C586D9247A007E00426E66 /* FIRMMessageCode.h */,
+				09C586DA247A007E00426E66 /* FIRMessagingSecureSocket.m */,
+				09C586DB247A007E00426E66 /* FIRMessagingExtensionHelper.m */,
+				09C586DC247A007E00426E66 /* FIRMessagingTopicOperation.h */,
+				09C586DD247A007E00426E66 /* FIRMessagingDelayedMessageQueue.h */,
+				09C586DE247A007E00426E66 /* NSError+FIRMessaging.h */,
+				09C586DF247A007E00426E66 /* FIRMessagingConnection.h */,
+				09C586E0247A007E00426E66 /* FIRMessagingAnalytics.m */,
+				09C586E1247A007E00426E66 /* FIRMessagingClient.h */,
+				09C586E2247A007E00426E66 /* FIRMessagingRmqManager.m */,
+				09C586E3247A007E00426E66 /* FIRMessagingVersionUtilities.m */,
+				09C586E4247A007E00426E66 /* FIRMessagingContextManagerService.h */,
+				09C586E5247A007E00426E66 /* FIRMessagingPubSubRegistrar.h */,
+				09C586E6247A007E00426E66 /* FIRMessagingPubSub.h */,
+				09C586E7247A007E00426E66 /* FIRMessagingPacketQueue.h */,
+				09C586E8247A007E00426E66 /* FIRMessagingCodedInputStream.m */,
+				09C586E9247A007E00426E66 /* FIRMessagingLogger.m */,
+				09C586EA247A007E00426E66 /* FIRMessaging.m */,
+				09C586EB247A007E00426E66 /* FIRMessagingUtilities.h */,
+				09C586EC247A007E00426E66 /* FIRMessagingPendingTopicsList.m */,
+				09C586ED247A007E00426E66 /* FIRMessagingDataMessageManager.h */,
+				09C586EE247A007E00426E66 /* FIRMessagingReceiver.m */,
+				09C586EF247A007E00426E66 /* FIRMessagingPersistentSyncMessage.m */,
+				09C586F0247A007E00426E66 /* NSDictionary+FIRMessaging.h */,
+				09C586F1247A007E00426E66 /* Public */,
+				09C586F5247A007E00426E66 /* FIRMessagingRemoteNotificationsProxy.h */,
+				09C586F6247A007E00426E66 /* FIRMessagingClient.m */,
+				09C586F7247A007E00426E66 /* FIRMessagingConnection.m */,
+				09C586F8247A007E00426E66 /* FIRMessagingAnalytics.h */,
+				09C586F9247A007E00426E66 /* FIRMessagingTopicsCommon.h */,
+				09C586FA247A007E00426E66 /* FirebaseMessaging.h */,
+				09C586FB247A007E00426E66 /* NSError+FIRMessaging.m */,
+				09C586FC247A007E00426E66 /* FIRMessagingDelayedMessageQueue.m */,
+				09C586FD247A007E00426E66 /* FIRMessagingTopicOperation.m */,
+				09C586FE247A007E00426E66 /* FIRMessagingSecureSocket.h */,
+				09C586FF247A007E00426E66 /* FIRMessagingSyncMessageManager.h */,
+				09C58700247A007E00426E66 /* FIRMessagingDefines.h */,
+				09C58701247A007E00426E66 /* FIRMessagingConstants.h */,
+				09C58702247A007E00426E66 /* FIRMessagingCodedInputStream.h */,
+				09C58703247A007E00426E66 /* FIRMessaging_Private.h */,
+				09C58704247A007E00426E66 /* FIRMessagingPacketQueue.m */,
+				09C58705247A007E00426E66 /* FIRMessagingPubSub.m */,
+				09C58706247A007E00426E66 /* FIRMessagingContextManagerService.m */,
+				09C58707247A007E00426E66 /* FIRMessagingVersionUtilities.h */,
+				09C58708247A007E00426E66 /* FIRMessagingPubSubRegistrar.m */,
+				09C58709247A007E00426E66 /* FIRMessagingRmqManager.h */,
+				09C5870A247A007E00426E66 /* FIRMessagingReceiver.h */,
+				09C5870B247A007E00426E66 /* FIRMessagingDataMessageManager.m */,
+				09C5870C247A007E00426E66 /* FIRMessagingPendingTopicsList.h */,
+				09C5870D247A007E00426E66 /* FIRMessagingUtilities.m */,
+				09C5870E247A007E00426E66 /* FIRMessagingLogger.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		09C586D2247A007E00426E66 /* Protos */ = {
+			isa = PBXGroup;
+			children = (
+				09C586D3247A007E00426E66 /* GtalkExtensions.pbobjc.h */,
+				09C586D4247A007E00426E66 /* GtalkCore.pbobjc.h */,
+				09C586D5247A007E00426E66 /* GtalkExtensions.pbobjc.m */,
+				09C586D6247A007E00426E66 /* GtalkCore.pbobjc.m */,
+			);
+			path = Protos;
+			sourceTree = "<group>";
+		};
+		09C586F1247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C586F2247A007E00426E66 /* FirebaseMessaging.h */,
+				09C586F3247A007E00426E66 /* FIRMessagingExtensionHelper.h */,
+				09C586F4247A007E00426E66 /* FIRMessaging.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C5870F247A007E00426E66 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				09C58710247A007E00426E66 /* README.md */,
+				09C58711247A007E00426E66 /* GoogleUtilities */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		09C58711247A007E00426E66 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				09C58712247A007E00426E66 /* UserDefaults */,
+				09C58716247A007E00426E66 /* MethodSwizzler */,
+				09C5871B247A007E00426E66 /* Logger */,
+				09C58721247A007E00426E66 /* LICENSE */,
+				09C58722247A007E00426E66 /* Network */,
+				09C5872E247A007E00426E66 /* SceneDelegateSwizzler */,
+				09C58734247A007E00426E66 /* Common */,
+				09C58736247A007E00426E66 /* Reachability */,
+				09C5873C247A007E00426E66 /* AppDelegateSwizzler */,
+				09C58743247A007E00426E66 /* Environment */,
+				09C58751247A007E00426E66 /* NSData+zlib */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		09C58712247A007E00426E66 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				09C58713247A007E00426E66 /* Private */,
+				09C58715247A007E00426E66 /* GULUserDefaults.m */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		09C58713247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58714247A007E00426E66 /* GULUserDefaults.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58716247A007E00426E66 /* MethodSwizzler */ = {
+			isa = PBXGroup;
+			children = (
+				09C58717247A007E00426E66 /* GULSwizzler.m */,
+				09C58718247A007E00426E66 /* Private */,
+			);
+			path = MethodSwizzler;
+			sourceTree = "<group>";
+		};
+		09C58718247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58719247A007E00426E66 /* GULSwizzler.h */,
+				09C5871A247A007E00426E66 /* GULOriginalIMPConvenienceMacros.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C5871B247A007E00426E66 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				09C5871C247A007E00426E66 /* GULLogger.m */,
+				09C5871D247A007E00426E66 /* Public */,
+				09C5871F247A007E00426E66 /* Private */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		09C5871D247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C5871E247A007E00426E66 /* GULLoggerLevel.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C5871F247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58720247A007E00426E66 /* GULLogger.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58722247A007E00426E66 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				09C58723247A007E00426E66 /* GULNetworkConstants.m */,
+				09C58724247A007E00426E66 /* Private */,
+				09C5872B247A007E00426E66 /* GULMutableDictionary.m */,
+				09C5872C247A007E00426E66 /* GULNetworkURLSession.m */,
+				09C5872D247A007E00426E66 /* GULNetwork.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		09C58724247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58725247A007E00426E66 /* GULNetworkMessageCode.h */,
+				09C58726247A007E00426E66 /* GULMutableDictionary.h */,
+				09C58727247A007E00426E66 /* GULNetworkURLSession.h */,
+				09C58728247A007E00426E66 /* GULNetworkLoggerProtocol.h */,
+				09C58729247A007E00426E66 /* GULNetwork.h */,
+				09C5872A247A007E00426E66 /* GULNetworkConstants.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C5872E247A007E00426E66 /* SceneDelegateSwizzler */ = {
+			isa = PBXGroup;
+			children = (
+				09C5872F247A007E00426E66 /* GULSceneDelegateSwizzler.m */,
+				09C58730247A007E00426E66 /* Internal */,
+				09C58732247A007E00426E66 /* Private */,
+			);
+			path = SceneDelegateSwizzler;
+			sourceTree = "<group>";
+		};
+		09C58730247A007E00426E66 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				09C58731247A007E00426E66 /* GULSceneDelegateSwizzler_Private.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		09C58732247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58733247A007E00426E66 /* GULSceneDelegateSwizzler.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58734247A007E00426E66 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				09C58735247A007E00426E66 /* GULLoggerCodes.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		09C58736247A007E00426E66 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				09C58737247A007E00426E66 /* GULReachabilityChecker.m */,
+				09C58738247A007E00426E66 /* GULReachabilityChecker+Internal.h */,
+				09C58739247A007E00426E66 /* Private */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		09C58739247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C5873A247A007E00426E66 /* GULReachabilityMessageCode.h */,
+				09C5873B247A007E00426E66 /* GULReachabilityChecker.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C5873C247A007E00426E66 /* AppDelegateSwizzler */ = {
+			isa = PBXGroup;
+			children = (
+				09C5873D247A007E00426E66 /* Internal */,
+				09C5873F247A007E00426E66 /* Private */,
+				09C58742247A007E00426E66 /* GULAppDelegateSwizzler.m */,
+			);
+			path = AppDelegateSwizzler;
+			sourceTree = "<group>";
+		};
+		09C5873D247A007E00426E66 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				09C5873E247A007E00426E66 /* GULAppDelegateSwizzler_Private.h */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		09C5873F247A007E00426E66 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09C58740247A007E00426E66 /* GULApplication.h */,
+				09C58741247A007E00426E66 /* GULAppDelegateSwizzler.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09C58743247A007E00426E66 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				09C58744247A007E00426E66 /* GULSecureCoding.m */,
+				09C58745247A007E00426E66 /* SecureStorage */,
+				09C58748247A007E00426E66 /* GULHeartbeatDateStorage.m */,
+				09C58749247A007E00426E66 /* third_party */,
+				09C5874C247A007E00426E66 /* Public */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		09C58745247A007E00426E66 /* SecureStorage */ = {
+			isa = PBXGroup;
+			children = (
+				09C58746247A007E00426E66 /* GULKeychainUtils.m */,
+				09C58747247A007E00426E66 /* GULKeychainStorage.m */,
+			);
+			path = SecureStorage;
+			sourceTree = "<group>";
+		};
+		09C58749247A007E00426E66 /* third_party */ = {
+			isa = PBXGroup;
+			children = (
+				09C5874A247A007E00426E66 /* GULAppEnvironmentUtil.h */,
+				09C5874B247A007E00426E66 /* GULAppEnvironmentUtil.m */,
+			);
+			path = third_party;
+			sourceTree = "<group>";
+		};
+		09C5874C247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C5874D247A007E00426E66 /* GULHeartbeatDateStorage.h */,
+				09C5874E247A007E00426E66 /* GULKeychainStorage.h */,
+				09C5874F247A007E00426E66 /* GULSecureCoding.h */,
+				09C58750247A007E00426E66 /* GULKeychainUtils.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		09C58751247A007E00426E66 /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				09C58752247A007E00426E66 /* GULNSData+zlib.m */,
+				09C58753247A007E00426E66 /* GULNSData+zlib.h */,
+			);
+			path = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		09C58754247A007E00426E66 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				09C58755247A007E00426E66 /* pb_common.c */,
+				09C58756247A007E00426E66 /* pb_decode.c */,
+				09C58757247A007E00426E66 /* pb_encode.c */,
+				09C58758247A007E00426E66 /* README.md */,
+				09C58759247A007E00426E66 /* pb_common.h */,
+				09C5875A247A007E00426E66 /* pb.h */,
+				09C5875B247A007E00426E66 /* LICENSE.txt */,
+				09C5875C247A007E00426E66 /* pb_encode.h */,
+				09C5875D247A007E00426E66 /* pb_decode.h */,
+			);
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		09C5875E247A007E00426E66 /* GoogleAppMeasurement */ = {
+			isa = PBXGroup;
+			children = (
+				09C5875F247A007E00426E66 /* Frameworks */,
+			);
+			path = GoogleAppMeasurement;
+			sourceTree = "<group>";
+		};
+		09C5875F247A007E00426E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C58760247A007E00426E66 /* GoogleAppMeasurement.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		09C58761247A007E00426E66 /* Protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				09C58762247A007E00426E66 /* LICENSE */,
+				09C58763247A007E00426E66 /* README.md */,
+				09C58764247A007E00426E66 /* objectivec */,
+			);
+			path = Protobuf;
+			sourceTree = "<group>";
+		};
+		09C58764247A007E00426E66 /* objectivec */ = {
+			isa = PBXGroup;
+			children = (
+				09C58765247A007E00426E66 /* GPBType.pbobjc.m */,
+				09C58766247A007E00426E66 /* GPBCodedOutputStream_PackagePrivate.h */,
+				09C58767247A007E00426E66 /* GPBArray.h */,
+				09C58768247A007E00426E66 /* GPBAny.pbobjc.h */,
+				09C58769247A007E00426E66 /* GPBExtensionRegistry.m */,
+				09C5876A247A007E00426E66 /* GPBRootObject.m */,
+				09C5876B247A007E00426E66 /* GPBDescriptor.m */,
+				09C5876C247A007E00426E66 /* GPBMessage.m */,
+				09C5876D247A007E00426E66 /* GPBEmpty.pbobjc.m */,
+				09C5876E247A007E00426E66 /* GPBProtocolBuffers.h */,
+				09C5876F247A007E00426E66 /* GPBWireFormat.m */,
+				09C58770247A007E00426E66 /* GPBFieldMask.pbobjc.h */,
+				09C58771247A007E00426E66 /* GPBUtilities.m */,
+				09C58772247A007E00426E66 /* GPBDuration.pbobjc.h */,
+				09C58773247A007E00426E66 /* GPBExtensionInternals.m */,
+				09C58774247A007E00426E66 /* GPBUnknownFieldSet.m */,
+				09C58775247A007E00426E66 /* GPBDictionary.h */,
+				09C58776247A007E00426E66 /* GPBCodedOutputStream.h */,
+				09C58777247A007E00426E66 /* GPBStruct.pbobjc.m */,
+				09C58778247A007E00426E66 /* GPBRootObject_PackagePrivate.h */,
+				09C58779247A007E00426E66 /* google */,
+				09C58785247A007E00426E66 /* GPBUtilities_PackagePrivate.h */,
+				09C58786247A007E00426E66 /* GPBTimestamp.pbobjc.m */,
+				09C58787247A007E00426E66 /* GPBCodedInputStream.m */,
+				09C58788247A007E00426E66 /* GPBWrappers.pbobjc.h */,
+				09C58789247A007E00426E66 /* GPBApi.pbobjc.m */,
+				09C5878A247A007E00426E66 /* GPBWellKnownTypes.m */,
+				09C5878B247A007E00426E66 /* GPBUnknownField.m */,
+				09C5878C247A007E00426E66 /* GPBSourceContext.pbobjc.m */,
+				09C5878D247A007E00426E66 /* GPBDescriptor.h */,
+				09C5878E247A007E00426E66 /* GPBCodedInputStream_PackagePrivate.h */,
+				09C5878F247A007E00426E66 /* GPBRootObject.h */,
+				09C58790247A007E00426E66 /* GPBBootstrap.h */,
+				09C58791247A007E00426E66 /* GPBExtensionRegistry.h */,
+				09C58792247A007E00426E66 /* GPBArray.m */,
+				09C58793247A007E00426E66 /* GPBAny.pbobjc.m */,
+				09C58794247A007E00426E66 /* GPBType.pbobjc.h */,
+				09C58795247A007E00426E66 /* GPBRuntimeTypes.h */,
+				09C58796247A007E00426E66 /* GPBFieldMask.pbobjc.m */,
+				09C58797247A007E00426E66 /* GPBUtilities.h */,
+				09C58798247A007E00426E66 /* GPBDuration.pbobjc.m */,
+				09C58799247A007E00426E66 /* GPBMessage_PackagePrivate.h */,
+				09C5879A247A007E00426E66 /* GPBWireFormat.h */,
+				09C5879B247A007E00426E66 /* GPBArray_PackagePrivate.h */,
+				09C5879C247A007E00426E66 /* GPBEmpty.pbobjc.h */,
+				09C5879D247A007E00426E66 /* GPBMessage.h */,
+				09C5879E247A007E00426E66 /* GPBProtocolBuffers_RuntimeSupport.h */,
+				09C5879F247A007E00426E66 /* GPBApi.pbobjc.h */,
+				09C587A0247A007E00426E66 /* GPBWrappers.pbobjc.m */,
+				09C587A1247A007E00426E66 /* GPBCodedInputStream.h */,
+				09C587A2247A007E00426E66 /* GPBDescriptor_PackagePrivate.h */,
+				09C587A3247A007E00426E66 /* GPBTimestamp.pbobjc.h */,
+				09C587A4247A007E00426E66 /* GPBStruct.pbobjc.h */,
+				09C587A5247A007E00426E66 /* GPBCodedOutputStream.m */,
+				09C587A6247A007E00426E66 /* GPBDictionary.m */,
+				09C587A7247A007E00426E66 /* GPBUnknownFieldSet.h */,
+				09C587A8247A007E00426E66 /* GPBExtensionInternals.h */,
+				09C587A9247A007E00426E66 /* GPBSourceContext.pbobjc.h */,
+				09C587AA247A007E00426E66 /* GPBUnknownField.h */,
+				09C587AB247A007E00426E66 /* GPBUnknownFieldSet_PackagePrivate.h */,
+				09C587AC247A007E00426E66 /* GPBWellKnownTypes.h */,
+				09C587AD247A007E00426E66 /* GPBUnknownField_PackagePrivate.h */,
+				09C587AE247A007E00426E66 /* GPBDictionary_PackagePrivate.h */,
+			);
+			path = objectivec;
+			sourceTree = "<group>";
+		};
+		09C58779247A007E00426E66 /* google */ = {
+			isa = PBXGroup;
+			children = (
+				09C5877A247A007E00426E66 /* protobuf */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		09C5877A247A007E00426E66 /* protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				09C5877B247A007E00426E66 /* Api.pbobjc.h */,
+				09C5877C247A007E00426E66 /* SourceContext.pbobjc.h */,
+				09C5877D247A007E00426E66 /* Duration.pbobjc.h */,
+				09C5877E247A007E00426E66 /* Empty.pbobjc.h */,
+				09C5877F247A007E00426E66 /* Wrappers.pbobjc.h */,
+				09C58780247A007E00426E66 /* Struct.pbobjc.h */,
+				09C58781247A007E00426E66 /* FieldMask.pbobjc.h */,
+				09C58782247A007E00426E66 /* Timestamp.pbobjc.h */,
+				09C58783247A007E00426E66 /* Type.pbobjc.h */,
+				09C58784247A007E00426E66 /* Any.pbobjc.h */,
+			);
+			path = protobuf;
+			sourceTree = "<group>";
+		};
+		09C587AF247A007E00426E66 /* FirebaseAnalyticsInterop */ = {
+			isa = PBXGroup;
+			children = (
+				09C587B0247A007E00426E66 /* LICENSE */,
+				09C587B1247A007E00426E66 /* Interop */,
+				09C587B8247A007E00426E66 /* README.md */,
+			);
+			path = FirebaseAnalyticsInterop;
+			sourceTree = "<group>";
+		};
+		09C587B1247A007E00426E66 /* Interop */ = {
+			isa = PBXGroup;
+			children = (
+				09C587B2247A007E00426E66 /* Analytics */,
+			);
+			path = Interop;
+			sourceTree = "<group>";
+		};
+		09C587B2247A007E00426E66 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				09C587B3247A007E00426E66 /* Public */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		09C587B3247A007E00426E66 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09C587B4247A007E00426E66 /* FIRInteropParameterNames.h */,
+				09C587B5247A007E00426E66 /* FIRAnalyticsInterop.h */,
+				09C587B6247A007E00426E66 /* FIRAnalyticsInteropListener.h */,
+				09C587B7247A007E00426E66 /* FIRInteropEventNames.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		97080FDDACCF1C22CCE1A2C8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3FE9C3FD4756C36666D4A521 /* Pods-Runner.debug.xcconfig */,
+				632BDC13CCCEA21D6D7E7548 /* Pods-Runner.release.xcconfig */,
+				7D991E2DF3EC27FEE3432C60 /* Pods-Runner.profile.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,9 +1978,12 @@
 		97C146E51CF9000F007C117D = {
 			isa = PBXGroup;
 			children = (
+				09C587C3247A051C00426E66 /* GoogleService-Info.plist */,
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
+				97080FDDACCF1C22CCE1A2C8 /* Pods */,
+				E76B738FBC18F9650FE9786F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +1998,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				09C587EE247A08A500426E66 /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -105,8 +2006,9 @@
 				97C146F11CF9000F007C117D /* Supporting Files */,
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
-				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
-				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
+				09C587F5247A1DEF00426E66 /* AppDelegate.m */,
+				09C5880A247A1DFC00426E66 /* AppDelegate.h */,
+				09C5880B247A1E3800426E66 /* main.m */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -118,6 +2020,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E76B738FBC18F9650FE9786F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09C5857A247A007D00426E66 /* Pods */,
+				09F2F46E2479FEE60066B6FD /* flutter_push_notifications.framework */,
+				9AC3FEC21B60752C6240C46E /* Pods_Runner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,12 +2037,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				B7267A8F5FCBCC121511EBBF /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				914027D105EDAF6E0F6CE427 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,7 +2066,9 @@
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = CQNPNTK3D7;
 						LastSwiftMigration = 1100;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -167,12 +2083,112 @@
 			mainGroup = 97C146E51CF9000F007C117D;
 			productRefGroup = 97C146EF1CF9000F007C117D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 09C5857C247A007D00426E66 /* Products */;
+					ProjectRef = 09C5857B247A007D00426E66 /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		09C587BD247A007E00426E66 /* flutter_push_notifications.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = flutter_push_notifications.framework;
+			remoteRef = 09C587BC247A007E00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587BF247A007E00426E66 /* Pods_Runner.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_Runner.framework;
+			remoteRef = 09C587BE247A007E00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587D8247A051C00426E66 /* FirebaseCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCore.framework;
+			remoteRef = 09C587D7247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587DA247A051C00426E66 /* FirebaseCoreDiagnostics.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseCoreDiagnostics.framework;
+			remoteRef = 09C587D9247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587DC247A051C00426E66 /* FirebaseInstallations.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseInstallations.framework;
+			remoteRef = 09C587DB247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587DE247A051C00426E66 /* FirebaseInstanceID.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseInstanceID.framework;
+			remoteRef = 09C587DD247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587E0247A051C00426E66 /* FirebaseMessaging.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FirebaseMessaging.framework;
+			remoteRef = 09C587DF247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587E2247A051C00426E66 /* GoogleDataTransport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleDataTransport.framework;
+			remoteRef = 09C587E1247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587E4247A051C00426E66 /* GoogleDataTransportCCTSupport.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleDataTransportCCTSupport.framework;
+			remoteRef = 09C587E3247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587E6247A051C00426E66 /* GoogleUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleUtilities.framework;
+			remoteRef = 09C587E5247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587E8247A051C00426E66 /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = 09C587E7247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587EA247A051C00426E66 /* FBLPromises.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FBLPromises.framework;
+			remoteRef = 09C587E9247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09C587EC247A051C00426E66 /* Protobuf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Protobuf.framework;
+			remoteRef = 09C587EB247A051C00426E66 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		97C146EC1CF9000F007C117D /* Resources */ = {
@@ -181,6 +2197,7 @@
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				09C587ED247A051C00426E66 /* GoogleService-Info.plist in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
@@ -203,6 +2220,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" thin";
 		};
+		914027D105EDAF6E0F6CE427 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9740EEB61CF901F6004384FC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +2249,28 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
+		B7267A8F5FCBCC121511EBBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -224,8 +2278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				09C5880C247A1E3800426E66 /* main.m in Sources */,
+				09C587F6247A1DEF00426E66 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +2363,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = CQNPNTK3D7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,8 +2379,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushNotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "flutter push";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -442,7 +2502,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = CQNPNTK3D7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,8 +2518,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushNotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "flutter push";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -469,7 +2534,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				DEVELOPMENT_TEAM = CQNPNTK3D7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -481,8 +2550,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushNotificationsExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rescomms.flutterPushPlugin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "flutter push";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

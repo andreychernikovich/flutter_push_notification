@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _token = "";
+  String _token = "qweqwe";
   String _message = "";
   final FlutterPushNotifications _flutterPushNotifications = FlutterPushNotifications();
 
@@ -36,6 +36,7 @@ class _MyAppState extends State<MyApp> {
       });
       print(message);
     });
+    _flutterPushNotifications.requestNotificationPermissions();
   }
 
   @override
