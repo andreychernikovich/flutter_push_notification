@@ -9,7 +9,7 @@ class FlutterPushNotifications {
 
   static const Platform _platform = LocalPlatform();
 
-  void configure() {
+  FlutterPushNotifications() {
     _channel.setMethodCallHandler(_handleMethod);
   }
 

@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _flutterPushNotifications.configure();
+    _flutterPushNotifications.requestNotificationPermissions();
     _flutterPushNotifications.getToken().then((token) {
       setState(() {
         _token = token;
@@ -36,7 +36,6 @@ class _MyAppState extends State<MyApp> {
       });
       print(message);
     });
-    _flutterPushNotifications.requestNotificationPermissions();
   }
 
   @override
