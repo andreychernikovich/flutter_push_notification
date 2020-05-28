@@ -14,6 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _token = "qweqwe";
   String _message = "";
+  String _action = "";
   final FlutterPushNotifications _flutterPushNotifications = FlutterPushNotifications();
 
   @override
@@ -36,6 +37,13 @@ class _MyAppState extends State<MyApp> {
       });
       print(message);
     });
+    _flutterPushNotifications.onActionClicked.listen((action) {
+      setState(() {
+        _action = action;
+      });
+      print(action);
+    });
+    _flutterPushNotifications.requestNotificationPermissions();
   }
 
   @override
@@ -53,7 +61,11 @@ class _MyAppState extends State<MyApp> {
               ),
               Container(
                 margin: const EdgeInsets.only(top: 10.0),
-                child: Text(_message),
+                child: Column(
+                  children: <Widget>[
+                    Text(_message),
+                    Text(_action),
+                ],)
               ),
             ],
           ),

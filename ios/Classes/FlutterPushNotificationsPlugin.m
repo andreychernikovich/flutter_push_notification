@@ -2,6 +2,10 @@
 #import "Firebase/Firebase.h"
 #import <UserNotifications/UserNotifications.h>
 
+NSString* const NotificationCategoryIdent = @"ASSIGNMENT_REPORT";
+NSString* const NotificationActionOneIdent = @"CONFIRM_ALL";
+NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
+
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 @interface FlutterPushNotificationsPlugin () <FIRMessagingDelegate>
 @end
@@ -12,6 +16,42 @@
   NSDictionary *_launchNotification;
   BOOL _resumingFromBackground;
 }
+    - (void)registerForNotification {
+
+      UIMutableUserNotificationAction* action1;
+      action1 = [[UIMutableUserNotificationAction alloc] init];
+      [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+      [action1 setTitle:@"Confirm All"];
+      [action1 setIdentifier:NotificationActionOneIdent];
+      [action1 setDestructive:NO];
+      [action1 setAuthenticationRequired:NO];
+
+      UIMutableUserNotificationAction* action2;
+      action2 = [[UIMutableUserNotificationAction alloc] init];
+      [action2 setActivationMode:UIUserNotificationActivationModeBackground];
+      [action2 setTitle:@"Show Assignments"];
+      [action2 setBehavior:UIUserNotificationActionBehaviorDefault];
+      [action2 setIdentifier:NotificationActionTwoIdent];
+      [action2 setDestructive:NO];
+      [action2 setAuthenticationRequired:NO];
+
+      UIMutableUserNotificationCategory* actionCategory;
+      actionCategory = [[UIMutableUserNotificationCategory alloc] init];
+      [actionCategory setIdentifier:NotificationCategoryIdent];
+      [actionCategory setActions:@[ action1, action2 ] forContext:UIUserNotificationActionContextDefault];
+
+
+      NSSet* categories = [NSSet setWithObjects:actionCategory, nil];
+      UIUserNotificationType types =
+          (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
+
+      UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+
+      [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+      [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+
+
     + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar
     {
         FlutterMethodChannel *channel= [FlutterMethodChannel methodChannelWithName:@"flutter_push_notifications" binaryMessenger:[registrar messenger]];
@@ -129,6 +169,7 @@
       if (launchOptions != nil) {
         _launchNotification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
       }
+      [self registerForNotification];
       return YES;
     }
 
@@ -172,6 +213,22 @@
     #endif
 
       [_channel invokeMethod:@"onToken" arguments:[FIRMessaging messaging].FCMToken];
+    }
+
+    - (void)application:(UIApplication*)application
+      handleActionWithIdentifier:(nullable NSString*)identifier
+           forRemoteNotification:(NSDictionary*)userInfo
+                withResponseInfo:(NSDictionary*)responseInfo
+               completionHandler:(void (^) (void))completionHandler {
+      if ([identifier isEqualToString:NotificationActionTwoIdent]) {
+        [_channel invokeMethod:@"onActionClicked" arguments:@"Show Assignments"];
+      } else {
+        [_channel invokeMethod:@"onActionClicked" arguments:@"Confirm All"];
+      }
+      NSLog(@"Action", identifier);
+      if (completionHandler) {
+          completionHandler ();
+      }
     }
 
     // This will only be called for iOS < 10. For iOS >= 10, we make this call when we request
