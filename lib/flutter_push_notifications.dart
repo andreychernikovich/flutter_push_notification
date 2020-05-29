@@ -30,7 +30,6 @@ class FlutterPushNotifications {
   }
 
   Future<dynamic> _handleMethod(MethodCall call) async {
-    print(call.method);
     switch (call.method) {
       case "onToken":
         final String token = call.arguments;

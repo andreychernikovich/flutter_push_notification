@@ -25,7 +25,6 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         _token = token;
       });
-      print(token);
     });
     _flutterPushNotifications.onPushPress.listen((message) {
       String textMessage = "";
@@ -35,13 +34,11 @@ class _MyAppState extends State<MyApp> {
       setState(() {
         _message = textMessage;
       });
-      print(message);
     });
     _flutterPushNotifications.onActionClicked.listen((action) {
       setState(() {
         _action = action;
       });
-      print(action);
     });
     _flutterPushNotifications.requestNotificationPermissions();
   }

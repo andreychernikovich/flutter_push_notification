@@ -20,7 +20,7 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
 
       UIMutableUserNotificationAction* action1;
       action1 = [[UIMutableUserNotificationAction alloc] init];
-      [action1 setActivationMode:UIUserNotificationActivationModeBackground];
+      [action1 setActivationMode:UIUserNotificationActivationModeForeground];
       [action1 setTitle:@"Confirm All"];
       [action1 setIdentifier:NotificationActionOneIdent];
       [action1 setDestructive:NO];
@@ -28,7 +28,7 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
 
       UIMutableUserNotificationAction* action2;
       action2 = [[UIMutableUserNotificationAction alloc] init];
-      [action2 setActivationMode:UIUserNotificationActivationModeBackground];
+      [action2 setActivationMode:UIUserNotificationActivationModeForeground];
       [action2 setTitle:@"Show Assignments"];
       [action2 setBehavior:UIUserNotificationActionBehaviorDefault];
       [action2 setIdentifier:NotificationActionTwoIdent];
@@ -145,9 +145,14 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
       NSDictionary *userInfo = response.notification.request.content.userInfo;
+      NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
       if (userInfo[@"gcm.message_id"]) {
-        [_channel invokeMethod:@"onResume" arguments:userInfo];
+        if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
+          [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
+        } else {
+          [_channel invokeMethod:@"onResume" arguments:userInfo];
+        }
         completionHandler();
       }
     }
@@ -219,16 +224,9 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
       handleActionWithIdentifier:(nullable NSString*)identifier
            forRemoteNotification:(NSDictionary*)userInfo
                 withResponseInfo:(NSDictionary*)responseInfo
-               completionHandler:(void (^) (void))completionHandler {
-      if ([identifier isEqualToString:NotificationActionTwoIdent]) {
-        [_channel invokeMethod:@"onActionClicked" arguments:@"Show Assignments"];
-      } else {
-        [_channel invokeMethod:@"onActionClicked" arguments:@"Confirm All"];
-      }
-      NSLog(@"Action", identifier);
-      if (completionHandler) {
-          completionHandler ();
-      }
+               completionHandler:(void (^) (void))completionHandler NS_AVAILABLE_IOS(10.0) {
+      [_channel invokeMethod:@"onResume" arguments:identifier];
+      completionHandler ();
     }
 
     // This will only be called for iOS < 10. For iOS >= 10, we make this call when we request
