@@ -5,6 +5,12 @@
 NSString* const NotificationCategoryIdent = @"ASSIGNMENT_REPORT";
 NSString* const NotificationActionOneIdent = @"CONFIRM_ALL";
 NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
+NSString* const NotificationActionThreeIdent = @"CONFIRM_ONE";
+NSString* const NotificationActionFourIdent = @"SHOW_REPORTS";
+
+
+NSString* const NotificationCategorySendIdent = @"SEND_REPORT";
+NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
 
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 @interface FlutterPushNotificationsPlugin () <FIRMessagingDelegate>
@@ -35,13 +41,43 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
       [action2 setDestructive:NO];
       [action2 setAuthenticationRequired:NO];
 
+      UIMutableUserNotificationAction* action3;
+      action3 = [[UIMutableUserNotificationAction alloc] init];
+      [action3 setActivationMode:UIUserNotificationActivationModeForeground];
+      [action3 setTitle:@"Confirm One"];
+      [action3 setIdentifier:NotificationActionThreeIdent];
+      [action3 setDestructive:NO];
+      [action3 setAuthenticationRequired:NO];
+
+      UIMutableUserNotificationAction* action4;
+      action4 = [[UIMutableUserNotificationAction alloc] init];
+      [action4 setActivationMode:UIUserNotificationActivationModeForeground];
+      [action4 setTitle:@"Show Reports"];
+      [action4 setBehavior:UIUserNotificationActionBehaviorDefault];
+      [action4 setIdentifier:NotificationActionFourIdent];
+      [action4 setDestructive:NO];
+      [action4 setAuthenticationRequired:NO];
+
+      UIMutableUserNotificationAction* actionSend;
+      actionSend = [[UIMutableUserNotificationAction alloc] init];
+      [actionSend setActivationMode:UIUserNotificationActivationModeForeground];
+      [actionSend setTitle:@"Send"];
+      [actionSend setBehavior:UIUserNotificationActionBehaviorTextInput];
+      [actionSend setIdentifier:NotificationActionSendIdent];
+      [actionSend setDestructive:NO];
+      [actionSend setAuthenticationRequired:NO];
+
       UIMutableUserNotificationCategory* actionCategory;
       actionCategory = [[UIMutableUserNotificationCategory alloc] init];
       [actionCategory setIdentifier:NotificationCategoryIdent];
-      [actionCategory setActions:@[ action1, action2 ] forContext:UIUserNotificationActionContextDefault];
+      [actionCategory setActions:@[ action1, action2, action3, action4 ] forContext:UIUserNotificationActionContextDefault];
 
+      UIMutableUserNotificationCategory* sendActionCategory;
+      sendActionCategory = [[UIMutableUserNotificationCategory alloc] init];
+      [sendActionCategory setIdentifier:NotificationCategorySendIdent];
+      [sendActionCategory setActions:@[ actionSend ] forContext:UIUserNotificationActionContextDefault];
 
-      NSSet* categories = [NSSet setWithObjects:actionCategory, nil];
+      NSSet* categories = [NSSet setWithObjects:actionCategory, sendActionCategory, nil];
       UIUserNotificationType types =
           (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
 
@@ -137,7 +173,9 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
       if (userInfo[@"gcm.message_id"]) {
         [[FIRMessaging messaging] appDidReceiveMessage:userInfo];
         [_channel invokeMethod:@"onMessage" arguments:userInfo];
-        completionHandler(UNNotificationPresentationOptionNone);
+        completionHandler(UNNotificationPresentationOptionBadge|
+                          UNNotificationPresentationOptionSound|
+                          UNNotificationPresentationOptionAlert);
       }
     }
 
@@ -150,6 +188,8 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
       if (userInfo[@"gcm.message_id"]) {
         if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
           [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
+        } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
+          [_channel invokeMethod:@"onActionClicked" arguments:response.description];
         } else {
           [_channel invokeMethod:@"onResume" arguments:userInfo];
         }
@@ -225,7 +265,12 @@ NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
            forRemoteNotification:(NSDictionary*)userInfo
                 withResponseInfo:(NSDictionary*)responseInfo
                completionHandler:(void (^) (void))completionHandler NS_AVAILABLE_IOS(10.0) {
-      [_channel invokeMethod:@"onResume" arguments:identifier];
+      if ([identifier isEqualToString:NotificationActionSendIdent]) {
+          NSString* report = responseInfo[UIUserNotificationActionResponseTypedTextKey];
+          [_channel invokeMethod:@"onActionClicked" arguments:report];
+      } else {
+        [_channel invokeMethod:@"onResume" arguments:identifier];
+      }
       completionHandler ();
     }
 
