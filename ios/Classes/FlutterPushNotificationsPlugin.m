@@ -183,13 +183,14 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
       NSDictionary *userInfo = response.notification.request.content.userInfo;
+      NSString *userText = response.description;
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
       if (userInfo[@"gcm.message_id"]) {
         if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
           [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
         } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:response.description];
+          [_channel invokeMethod:@"onActionClicked" arguments:userText];
         } else {
           [_channel invokeMethod:@"onResume" arguments:userInfo];
         }
@@ -213,6 +214,7 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       if (launchOptions != nil) {
         _launchNotification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+
       }
       [self registerForNotification];
       return YES;
@@ -245,6 +247,19 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
         didReceiveRemoteNotification:(NSDictionary *)userInfo
               fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
       [self didReceiveRemoteNotification:userInfo];
+      NSDictionary *userInfo = response.notification.request.content.userInfo;
+      NSString *userText = response.description;
+      NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
+      // Check to key to ensure we only handle messages from Firebase
+      if (userInfo[@"gcm.message_id"]) {
+        if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
+          [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
+        } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
+          [_channel invokeMethod:@"onActionClicked" arguments:userText];
+        } else {
+          [_channel invokeMethod:@"onResume" arguments:userInfo];
+        }
+      }
       completionHandler(UIBackgroundFetchResultNoData);
       return YES;
     }
