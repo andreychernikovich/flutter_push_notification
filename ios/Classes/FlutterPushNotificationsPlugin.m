@@ -22,66 +22,35 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
   NSDictionary *_launchNotification;
   BOOL _resumingFromBackground;
 }
-    - (void)registerForNotification {
 
-      UIMutableUserNotificationAction* action1;
-      action1 = [[UIMutableUserNotificationAction alloc] init];
-      [action1 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action1 setTitle:@"Confirm All"];
-      [action1 setIdentifier:NotificationActionOneIdent];
-      [action1 setDestructive:NO];
-      [action1 setAuthenticationRequired:NO];
+- (void)registerForNotification: (NSArray *)categories NS_AVAILABLE_IOS(9.0) {
+    NSMutableArray *notificationCotigories = [[NSMutableArray alloc] init];
+    for (NSDictionary* category in categories) {
+        NSString *categoryIdentifier = category[@"identifier"];
+        NSMutableArray *actions = [[NSMutableArray alloc] init];
+        for (NSDictionary *action in category[@"actions"]) {
+            NSString *title = action[@"title"];
+            NSString *identifier = action[@"identifier"];
+            UIMutableUserNotificationAction* notificationAction = [[UIMutableUserNotificationAction alloc] init];
+            [notificationAction setActivationMode:[action[@"activationMode"] isEqual:@"background"]  ? UIUserNotificationActivationModeBackground : UIUserNotificationActivationModeForeground];
+            [notificationAction setTitle:title];
+            [notificationAction setBehavior:[action[@"behavior"]isEqual:@"default"] ? UIUserNotificationActionBehaviorDefault : UIUserNotificationActionBehaviorTextInput];
+            [notificationAction setIdentifier:identifier];
+            [notificationAction setDestructive:NO];
+            [notificationAction setAuthenticationRequired:NO];
+            [actions addObject:notificationAction];
+        }
+        UIMutableUserNotificationCategory* notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+        [notificationCategory setIdentifier:categoryIdentifier];
+        [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+        [notificationCotigories addObject:notificationCategory];
+    }
 
-      UIMutableUserNotificationAction* action2;
-      action2 = [[UIMutableUserNotificationAction alloc] init];
-      [action2 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action2 setTitle:@"Show Assignments"];
-      [action2 setBehavior:UIUserNotificationActionBehaviorDefault];
-      [action2 setIdentifier:NotificationActionTwoIdent];
-      [action2 setDestructive:NO];
-      [action2 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* action3;
-      action3 = [[UIMutableUserNotificationAction alloc] init];
-      [action3 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action3 setTitle:@"Confirm One"];
-      [action3 setIdentifier:NotificationActionThreeIdent];
-      [action3 setDestructive:NO];
-      [action3 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* action4;
-      action4 = [[UIMutableUserNotificationAction alloc] init];
-      [action4 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action4 setTitle:@"Show Reports"];
-      [action4 setBehavior:UIUserNotificationActionBehaviorDefault];
-      [action4 setIdentifier:NotificationActionFourIdent];
-      [action4 setDestructive:NO];
-      [action4 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* actionSend;
-      actionSend = [[UIMutableUserNotificationAction alloc] init];
-      [actionSend setActivationMode:UIUserNotificationActivationModeForeground];
-      [actionSend setTitle:@"Send"];
-      [actionSend setBehavior:UIUserNotificationActionBehaviorTextInput];
-      [actionSend setIdentifier:NotificationActionSendIdent];
-      [actionSend setDestructive:NO];
-      [actionSend setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationCategory* actionCategory;
-      actionCategory = [[UIMutableUserNotificationCategory alloc] init];
-      [actionCategory setIdentifier:NotificationCategoryIdent];
-      [actionCategory setActions:@[ action1, action2, action3, action4 ] forContext:UIUserNotificationActionContextDefault];
-
-      UIMutableUserNotificationCategory* sendActionCategory;
-      sendActionCategory = [[UIMutableUserNotificationCategory alloc] init];
-      [sendActionCategory setIdentifier:NotificationCategorySendIdent];
-      [sendActionCategory setActions:@[ actionSend ] forContext:UIUserNotificationActionContextDefault];
-
-      NSSet* categories = [NSSet setWithObjects:actionCategory, sendActionCategory, nil];
+      NSSet* categoriesSet = [NSSet setWithArray:notificationCotigories];
       UIUserNotificationType types =
           (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
 
-      UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+      UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:categoriesSet];
 
       [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
       [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -138,6 +107,9 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
           [[UIApplication sharedApplication] registerForRemoteNotifications];
           result([NSNumber numberWithBool:YES]);
         }
+      } else if ([@"registerNotificationCategory" isEqualToString:method]) {
+          NSArray *categories = call.arguments[@"categories"];
+         [self registerForNotification:categories];
       } else if ([@"getToken" isEqualToString:method]) {
         [[FIRInstanceID instanceID]
             instanceIDWithHandler:^(FIRInstanceIDResult *_Nullable instanceIDResult,
@@ -219,7 +191,7 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
         _launchNotification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
 
       }
-      [self registerForNotification];
+//      [self registerForNotification];
       return YES;
     }
 

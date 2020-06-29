@@ -3,6 +3,8 @@ import 'package:platform/platform.dart';
 
 import 'package:flutter/services.dart';
 
+import 'models/NotificationCategory.dart';
+
 class FlutterPushNotifications {
   static const MethodChannel _channel =
       const MethodChannel('flutter_push_notifications');
@@ -14,19 +16,26 @@ class FlutterPushNotifications {
   }
 
   final StreamController<String> _tokenStreamController =
-  StreamController<String>.broadcast();
+      StreamController<String>.broadcast();
 
   final StreamController<Map<String, dynamic>> _messageStreamController =
-  StreamController<Map<String, dynamic>>.broadcast();
+      StreamController<Map<String, dynamic>>.broadcast();
 
-  final StreamController<String> _actionStreamController = 
-  StreamController<String>.broadcast();
+  final StreamController<String> _actionStreamController =
+      StreamController<String>.broadcast();
 
   FutureOr<bool> requestNotificationPermissions() {
     if (!_platform.isIOS) {
       return null;
     }
     return _channel.invokeMethod<bool>('requestNotificationPermissions');
+  }
+
+  Future<void> registerNotificationCategory(List<NotificationCategory> categories) {
+    return _channel.invokeMethod<void>(
+        'registerNotificationCategory', <String, dynamic>{
+          'categories': new List.generate(categories.length, (index) => categories[index].toJson())
+    });
   }
 
   Future<dynamic> _handleMethod(MethodCall call) async {
@@ -37,22 +46,25 @@ class FlutterPushNotifications {
         return null;
       //todo change to onPushPress in future
       case "onMessage":
-        final Map<String, dynamic> message = call.arguments.cast<String, dynamic>();
+        final Map<String, dynamic> message =
+            call.arguments.cast<String, dynamic>();
         _messageStreamController.add(message);
         return null;
       //todo change to onPushPress in future
       case "onResume":
-        final Map<String, dynamic> message = call.arguments.cast<String, dynamic>();
+        final Map<String, dynamic> message =
+            call.arguments.cast<String, dynamic>();
         _messageStreamController.add(message);
         return null;
       case "onPushPress":
-        final Map<String, dynamic> message = call.arguments.cast<String, dynamic>();
-         _messageStreamController.add(message);
-         return null;
+        final Map<String, dynamic> message =
+            call.arguments.cast<String, dynamic>();
+        _messageStreamController.add(message);
+        return null;
       case "onActionClicked":
         final String action = call.arguments;
         _actionStreamController.add(action);
-        return null;   
+        return null;
       default:
         throw UnsupportedError("Unrecognized JSON message");
     }
