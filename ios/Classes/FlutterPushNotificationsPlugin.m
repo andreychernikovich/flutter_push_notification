@@ -182,20 +182,23 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
+      double delayInSeconds = 0.3;
       NSDictionary *userInfo = response.notification.request.content.userInfo;
-      NSString *userText = response.description;
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
-      if (userInfo[@"gcm.message_id"]) {
-        if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
-        } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:userText];
-        } else {
-          [_channel invokeMethod:@"onResume" arguments:userInfo];
-        }
-        completionHandler();
-      }
+      dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+      dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+          if (userInfo[@"gcm.message_id"]) {
+            if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
+              [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];
+            } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
+              [_channel invokeMethod:@"onActionClicked" arguments: ((UNTextInputNotificationResponse*)response).userText];
+            } else {
+              [_channel invokeMethod:@"onResume" arguments:userInfo];
+            }
+            completionHandler();
+          }
+      });
     }
 
     #endif
@@ -243,27 +246,6 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
       application.applicationIconBadgeNumber = 0;
     }
 
-    - (BOOL)application:(UIApplication *)application
-        didReceiveRemoteNotification:(NSDictionary *)userInfo
-              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
-      [self didReceiveRemoteNotification:userInfo];
-      NSDictionary *userInfo = response.notification.request.content.userInfo;
-      NSString *userText = response.description;
-      NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
-      // Check to key to ensure we only handle messages from Firebase
-      if (userInfo[@"gcm.message_id"]) {
-        if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
-        } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:userText];
-        } else {
-          [_channel invokeMethod:@"onResume" arguments:userInfo];
-        }
-      }
-      completionHandler(UIBackgroundFetchResultNoData);
-      return YES;
-    }
-
     - (void)application:(UIApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     #ifdef DEBUG
@@ -273,20 +255,6 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     #endif
 
       [_channel invokeMethod:@"onToken" arguments:[FIRMessaging messaging].FCMToken];
-    }
-
-    - (void)application:(UIApplication*)application
-      handleActionWithIdentifier:(nullable NSString*)identifier
-           forRemoteNotification:(NSDictionary*)userInfo
-                withResponseInfo:(NSDictionary*)responseInfo
-               completionHandler:(void (^) (void))completionHandler NS_AVAILABLE_IOS(10.0) {
-      if ([identifier isEqualToString:NotificationActionSendIdent]) {
-          NSString* report = responseInfo[UIUserNotificationActionResponseTypedTextKey];
-          [_channel invokeMethod:@"onActionClicked" arguments:report];
-      } else {
-        [_channel invokeMethod:@"onResume" arguments:identifier];
-      }
-      completionHandler ();
     }
 
     // This will only be called for iOS < 10. For iOS >= 10, we make this call when we request
