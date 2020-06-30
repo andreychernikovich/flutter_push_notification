@@ -154,7 +154,7 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
-      double delayInSeconds = 0.3;
+      double delayInSeconds = 1;
       NSDictionary *userInfo = response.notification.request.content.userInfo;
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
