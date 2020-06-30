@@ -2,16 +2,6 @@
 #import "Firebase/Firebase.h"
 #import <UserNotifications/UserNotifications.h>
 
-NSString* const NotificationCategoryIdent = @"ASSIGNMENT_REPORT";
-NSString* const NotificationActionOneIdent = @"CONFIRM_ALL";
-NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
-NSString* const NotificationActionThreeIdent = @"CONFIRM_ONE";
-NSString* const NotificationActionFourIdent = @"SHOW_REPORTS";
-
-
-NSString* const NotificationCategorySendIdent = @"SEND_REPORT";
-NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
-
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 @interface FlutterPushNotificationsPlugin () <FIRMessagingDelegate>
 @end
@@ -22,66 +12,35 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
   NSDictionary *_launchNotification;
   BOOL _resumingFromBackground;
 }
-    - (void)registerForNotification {
 
-      UIMutableUserNotificationAction* action1;
-      action1 = [[UIMutableUserNotificationAction alloc] init];
-      [action1 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action1 setTitle:@"Confirm All"];
-      [action1 setIdentifier:NotificationActionOneIdent];
-      [action1 setDestructive:NO];
-      [action1 setAuthenticationRequired:NO];
+- (void)registerForNotification: (NSArray *)categories NS_AVAILABLE_IOS(9.0) {
+    NSMutableArray *notificationCotigories = [[NSMutableArray alloc] init];
+    for (NSDictionary* category in categories) {
+        NSString *categoryIdentifier = category[@"identifier"];
+        NSMutableArray *actions = [[NSMutableArray alloc] init];
+        for (NSDictionary *action in category[@"actions"]) {
+            NSString *title = action[@"title"];
+            NSString *identifier = action[@"identifier"];
+            UIMutableUserNotificationAction* notificationAction = [[UIMutableUserNotificationAction alloc] init];
+            [notificationAction setActivationMode:[action[@"activationMode"] isEqual:@"background"]  ? UIUserNotificationActivationModeBackground : UIUserNotificationActivationModeForeground];
+            [notificationAction setTitle:title];
+            [notificationAction setBehavior:[action[@"behavior"]isEqual:@"default"] ? UIUserNotificationActionBehaviorDefault : UIUserNotificationActionBehaviorTextInput];
+            [notificationAction setIdentifier:identifier];
+            [notificationAction setDestructive:NO];
+            [notificationAction setAuthenticationRequired:NO];
+            [actions addObject:notificationAction];
+        }
+        UIMutableUserNotificationCategory* notificationCategory = [[UIMutableUserNotificationCategory alloc] init];
+        [notificationCategory setIdentifier:categoryIdentifier];
+        [notificationCategory setActions:actions forContext:UIUserNotificationActionContextDefault];
+        [notificationCotigories addObject:notificationCategory];
+    }
 
-      UIMutableUserNotificationAction* action2;
-      action2 = [[UIMutableUserNotificationAction alloc] init];
-      [action2 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action2 setTitle:@"Show Assignments"];
-      [action2 setBehavior:UIUserNotificationActionBehaviorDefault];
-      [action2 setIdentifier:NotificationActionTwoIdent];
-      [action2 setDestructive:NO];
-      [action2 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* action3;
-      action3 = [[UIMutableUserNotificationAction alloc] init];
-      [action3 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action3 setTitle:@"Confirm One"];
-      [action3 setIdentifier:NotificationActionThreeIdent];
-      [action3 setDestructive:NO];
-      [action3 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* action4;
-      action4 = [[UIMutableUserNotificationAction alloc] init];
-      [action4 setActivationMode:UIUserNotificationActivationModeForeground];
-      [action4 setTitle:@"Show Reports"];
-      [action4 setBehavior:UIUserNotificationActionBehaviorDefault];
-      [action4 setIdentifier:NotificationActionFourIdent];
-      [action4 setDestructive:NO];
-      [action4 setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationAction* actionSend;
-      actionSend = [[UIMutableUserNotificationAction alloc] init];
-      [actionSend setActivationMode:UIUserNotificationActivationModeForeground];
-      [actionSend setTitle:@"Send"];
-      [actionSend setBehavior:UIUserNotificationActionBehaviorTextInput];
-      [actionSend setIdentifier:NotificationActionSendIdent];
-      [actionSend setDestructive:NO];
-      [actionSend setAuthenticationRequired:NO];
-
-      UIMutableUserNotificationCategory* actionCategory;
-      actionCategory = [[UIMutableUserNotificationCategory alloc] init];
-      [actionCategory setIdentifier:NotificationCategoryIdent];
-      [actionCategory setActions:@[ action1, action2, action3, action4 ] forContext:UIUserNotificationActionContextDefault];
-
-      UIMutableUserNotificationCategory* sendActionCategory;
-      sendActionCategory = [[UIMutableUserNotificationCategory alloc] init];
-      [sendActionCategory setIdentifier:NotificationCategorySendIdent];
-      [sendActionCategory setActions:@[ actionSend ] forContext:UIUserNotificationActionContextDefault];
-
-      NSSet* categories = [NSSet setWithObjects:actionCategory, sendActionCategory, nil];
+      NSSet* categoriesSet = [NSSet setWithArray:notificationCotigories];
       UIUserNotificationType types =
           (UIUserNotificationTypeAlert | UIUserNotificationTypeSound | UIUserNotificationTypeBadge);
 
-      UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:categories];
+      UIUserNotificationSettings* settings = [UIUserNotificationSettings settingsForTypes:types categories:categoriesSet];
 
       [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
       [[UIApplication sharedApplication] registerForRemoteNotifications];
@@ -138,6 +97,9 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
           [[UIApplication sharedApplication] registerForRemoteNotifications];
           result([NSNumber numberWithBool:YES]);
         }
+      } else if ([@"registerNotificationCategory" isEqualToString:method]) {
+          NSArray *categories = call.arguments[@"categories"];
+         [self registerForNotification:categories];
       } else if ([@"getToken" isEqualToString:method]) {
         [[FIRInstanceID instanceID]
             instanceIDWithHandler:^(FIRInstanceIDResult *_Nullable instanceIDResult,
@@ -182,19 +144,23 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
+      double delayInSeconds = 1;
       NSDictionary *userInfo = response.notification.request.content.userInfo;
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
-      if (userInfo[@"gcm.message_id"]) {
-        if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];  
-        } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
-          [_channel invokeMethod:@"onActionClicked" arguments:response.description];
-        } else {
-          [_channel invokeMethod:@"onResume" arguments:userInfo];
-        }
-        completionHandler();
-      }
+      dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+      dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+          if (userInfo[@"gcm.message_id"]) {
+            if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
+              [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];
+            } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
+              [_channel invokeMethod:@"onActionClicked" arguments: ((UNTextInputNotificationResponse*)response).userText];
+            } else {
+              [_channel invokeMethod:@"onResume" arguments:userInfo];
+            }
+            completionHandler();
+          }
+      });
     }
 
     #endif
@@ -213,8 +179,9 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
       if (launchOptions != nil) {
         _launchNotification = launchOptions[UIApplicationLaunchOptionsRemoteNotificationKey];
+
       }
-      [self registerForNotification];
+//      [self registerForNotification];
       return YES;
     }
 
@@ -241,14 +208,6 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
       application.applicationIconBadgeNumber = 0;
     }
 
-    - (BOOL)application:(UIApplication *)application
-        didReceiveRemoteNotification:(NSDictionary *)userInfo
-              fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler {
-      [self didReceiveRemoteNotification:userInfo];
-      completionHandler(UIBackgroundFetchResultNoData);
-      return YES;
-    }
-
     - (void)application:(UIApplication *)application
         didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     #ifdef DEBUG
@@ -258,20 +217,6 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     #endif
 
       [_channel invokeMethod:@"onToken" arguments:[FIRMessaging messaging].FCMToken];
-    }
-
-    - (void)application:(UIApplication*)application
-      handleActionWithIdentifier:(nullable NSString*)identifier
-           forRemoteNotification:(NSDictionary*)userInfo
-                withResponseInfo:(NSDictionary*)responseInfo
-               completionHandler:(void (^) (void))completionHandler NS_AVAILABLE_IOS(10.0) {
-      if ([identifier isEqualToString:NotificationActionSendIdent]) {
-          NSString* report = responseInfo[UIUserNotificationActionResponseTypedTextKey];
-          [_channel invokeMethod:@"onActionClicked" arguments:report];
-      } else {
-        [_channel invokeMethod:@"onResume" arguments:identifier];
-      }
-      completionHandler ();
     }
 
     // This will only be called for iOS < 10. For iOS >= 10, we make this call when we request

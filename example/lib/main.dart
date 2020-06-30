@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:flutter_push_notifications/flutter_push_notifications.dart';
+import 'package:flutter_push_notifications/models/NotificationCategory.dart';
+import 'package:flutter_push_notifications/models/NotificationAction.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _token = "qweqwe";
+  String _token = "";
   String _message = "";
   String _action = "";
   final FlutterPushNotifications _flutterPushNotifications = FlutterPushNotifications();
@@ -21,6 +21,37 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     _flutterPushNotifications.requestNotificationPermissions();
+    List<NotificationAction> actions = List<NotificationAction>();
+    NotificationAction action1 = NotificationAction(
+      title: 'Confirm all',
+      identifier: 'CONFIRM_ALL'
+    );
+    actions.add(action1);
+    NotificationAction action2 = NotificationAction(
+        title: 'Show assignments',
+        identifier: 'SHOW_ASSIGNMENTS'
+    );
+    actions.add(action2);
+    NotificationAction action3 = NotificationAction(
+        title: 'Confirm one',
+        identifier: 'CONFIRM_ONE'
+    );
+    actions.add(action3);
+    NotificationAction action4 = NotificationAction(
+        title: 'Show Reports',
+        identifier: 'SHOW_REPORTS'
+    );
+    actions.add(action4);
+    List<NotificationAction> sendActions = List<NotificationAction>();
+    NotificationAction sendAction = NotificationAction(
+      title: 'Send Report',
+      identifier: 'SEND_ACTION',
+      behavior: 'textInput'
+    );
+    sendActions.add(sendAction);
+    NotificationCategory assignmentCategory = NotificationCategory('ASSIGNMENT_REPORT', actions);
+    NotificationCategory sendCategory = NotificationCategory('SEND_REPORT', sendActions);
+    _flutterPushNotifications.registerNotificationCategory([assignmentCategory, sendCategory]);
     _flutterPushNotifications.getToken().then((token) {
       setState(() {
         _token = token;
