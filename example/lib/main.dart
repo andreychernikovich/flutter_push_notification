@@ -42,8 +42,16 @@ class _MyAppState extends State<MyApp> {
         identifier: 'SHOW_REPORTS'
     );
     actions.add(action4);
-    NotificationCategory category = NotificationCategory('ASSIGNMENT_REPORT', actions);
-    _flutterPushNotifications.registerNotificationCategory([category]);
+    List<NotificationAction> sendActions = List<NotificationAction>();
+    NotificationAction sendAction = NotificationAction(
+      title: 'Send Report',
+      identifier: 'SEND_ACTION',
+      behavior: 'textInput'
+    );
+    sendActions.add(sendAction);
+    NotificationCategory assignmentCategory = NotificationCategory('ASSIGNMENT_REPORT', actions);
+    NotificationCategory sendCategory = NotificationCategory('SEND_REPORT', sendActions);
+    _flutterPushNotifications.registerNotificationCategory([assignmentCategory, sendCategory]);
     _flutterPushNotifications.getToken().then((token) {
       setState(() {
         _token = token;
