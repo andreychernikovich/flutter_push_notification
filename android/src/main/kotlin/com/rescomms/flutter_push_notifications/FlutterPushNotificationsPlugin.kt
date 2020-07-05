@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.annotation.NonNull
+import androidx.core.app.RemoteInput
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.google.firebase.FirebaseApp
 import com.google.firebase.iid.FirebaseInstanceId
@@ -68,6 +69,7 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                 call.arguments.let { FirebaseMessaging.getInstance().isAutoInitEnabled = it as Boolean }
                 result.success(null)
             }
+            "registerNotificationCategory"-> notificationUtils.addCategories(call.arguments as Map<String, Any>)
             else -> result.notImplemented()
         }
     }
@@ -87,12 +89,14 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
     override fun onNewIntent(intent: Intent): Boolean {
         return when (intent.action) {
             ACTION_PRESS_PUSH_BUTTON -> {
-                intent.getParcelableExtra<RemoteMessage>(EXTRA_PUSH_DATA).apply {
-                    this.data.toMutableMap().apply {
-                        intent.extras?.let { put("pressAction", it[EXTRA_PRESS_ACTION] as String) }
-                        channel.invokeMethod("onPushPress", this)
-                        notificationUtils.notificationManager.cancelAll()
-                    }
+                invokeFromNotification(intent) {
+                        Pair("pressAction", intent.extras[EXTRA_PRESS_ACTION] as String)
+                }
+                true
+            }
+            ACTION_INPUT_DATA-> {
+                invokeFromNotification(intent) {
+                    Pair("inputValue", RemoteInput.getResultsFromIntent(intent).getCharSequence(KEY_TEXT_REPLY) as String)
                 }
                 true
             }
@@ -140,6 +144,17 @@ class FlutterPushNotificationsPlugin : FlutterPlugin, MethodCallHandler, Broadca
                     this.putExtra(EXTRA_TOKEN, it.token)
                     LocalBroadcastManager.getInstance(context).sendBroadcast(this)
                 }
+            }
+        }
+    }
+
+    private fun invokeFromNotification(intent: Intent, notificationData: () -> Pair<String, String>) {
+        intent.getParcelableExtra<RemoteMessage>(EXTRA_PUSH_DATA).apply {
+            this.data.toMutableMap().apply {
+                put(notificationData().first, notificationData().second)
+                channel.invokeMethod("onPushPress", this)
+                notificationUtils.notificationManager.cancelAll()
+
             }
         }
     }
