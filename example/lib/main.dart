@@ -23,8 +23,8 @@ class _MyAppState extends State<MyApp> {
     _flutterPushNotifications.requestNotificationPermissions();
     List<NotificationAction> actions = List<NotificationAction>();
     NotificationAction action1 = NotificationAction(
-        title: 'Confirm all',
-        identifier: 'CONFIRM_ALL'
+      title: 'Confirm all',
+      identifier: 'CONFIRM_ALL'
     );
     actions.add(action1);
     NotificationAction action2 = NotificationAction(
@@ -44,9 +44,9 @@ class _MyAppState extends State<MyApp> {
     actions.add(action4);
     List<NotificationAction> sendActions = List<NotificationAction>();
     NotificationAction sendAction = NotificationAction(
-        title: 'Send Report',
-        identifier: 'SEND_ACTION',
-        behavior: 'textInput'
+      title: 'Send Report',
+      identifier: 'SEND_ACTION',
+      behavior: 'textInput'
     );
     sendActions.add(sendAction);
     NotificationCategory assignmentCategory = NotificationCategory('ASSIGNMENT_REPORT', actions);
@@ -54,7 +54,6 @@ class _MyAppState extends State<MyApp> {
     _flutterPushNotifications.registerNotificationCategory([assignmentCategory, sendCategory]);
     _flutterPushNotifications.getToken().then((token) {
       setState(() {
-        print(token);
         _token = token;
       });
     });

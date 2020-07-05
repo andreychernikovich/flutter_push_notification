@@ -2,16 +2,6 @@
 #import "Firebase/Firebase.h"
 #import <UserNotifications/UserNotifications.h>
 
-NSString* const NotificationCategoryIdent = @"ASSIGNMENT_REPORT";
-NSString* const NotificationActionOneIdent = @"CONFIRM_ALL";
-NSString* const NotificationActionTwoIdent = @"SHOW_ASSIGNMENTS";
-NSString* const NotificationActionThreeIdent = @"CONFIRM_ONE";
-NSString* const NotificationActionFourIdent = @"SHOW_REPORTS";
-
-
-NSString* const NotificationCategorySendIdent = @"SEND_REPORT";
-NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
-
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 @interface FlutterPushNotificationsPlugin () <FIRMessagingDelegate>
 @end
@@ -154,7 +144,7 @@ NSString* const NotificationActionSendIdent = @"SEND_REPORT_MESSAGE";
     - (void)userNotificationCenter:(UNUserNotificationCenter *)center
         didReceiveNotificationResponse:(UNNotificationResponse *)response
                  withCompletionHandler:(void (^)(void))completionHandler NS_AVAILABLE_IOS(10.0) {
-      double delayInSeconds = 0.3;
+      double delayInSeconds = 1;
       NSDictionary *userInfo = response.notification.request.content.userInfo;
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
