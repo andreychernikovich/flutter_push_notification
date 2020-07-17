@@ -78,7 +78,9 @@ example sending data from firebase:
   },
 	"to" : "DEVICE_TOKEN",
   "data": {
-    "route": "/assignments/123456"
+    "data": {
+      "route": "/assignments/123456"
+    }
   }
 }
 ```

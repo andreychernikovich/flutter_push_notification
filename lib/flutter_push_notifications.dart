@@ -21,8 +21,8 @@ class FlutterPushNotifications {
   final StreamController<Map<String, dynamic>> _messageStreamController =
       StreamController<Map<String, dynamic>>.broadcast();
 
-  final StreamController<String> _actionStreamController =
-      StreamController<String>.broadcast();
+  final StreamController<Map<String, dynamic>> _actionStreamController =
+      StreamController<Map<String, dynamic>>.broadcast();
 
   FutureOr<bool> requestNotificationPermissions() {
     if (!_platform.isIOS) {
@@ -62,8 +62,9 @@ class FlutterPushNotifications {
         _messageStreamController.add(message);
         return null;
       case "onActionClicked":
-        final String action = call.arguments;
-        _actionStreamController.add(action);
+        final Map<String, dynamic> data =
+            call.arguments.cast<String, dynamic>();
+        _actionStreamController.add(data);
         return null;
       default:
         throw UnsupportedError("Unrecognized JSON message");
@@ -78,7 +79,7 @@ class FlutterPushNotifications {
     return _messageStreamController.stream;
   }
 
-  Stream<String> get onActionClicked {
+  Stream<Map<String, dynamic>> get onActionClicked {
     return _actionStreamController.stream;
   }
 
