@@ -1,6 +1,19 @@
 # flutter_push_notifications
 
-Flutter push notifications
+The goal of this plugin is to make it easy to execute actions directly from PUSH notifications.
+
+Sample uses for this plugin are:
+
+- Accepting/Rejecting a work offer, sent as PUSH notification
+
+- Reporting an assignment with defaults when you get a notification that assignment has finished
+
+- Sending a confirmation that you received 15 assignments that were assigned to you
+
+- Replying to a message directly from a widget when you get a message as PUSH notification
+
+## Usage
+To use this plugin, add `flutter_push_notifications` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
 ## Getting Started
 
