@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _token = "";
   String _message = "";
-  String _action = "";
+  String _actionData = "";
   final FlutterPushNotifications _flutterPushNotifications = FlutterPushNotifications();
 
   @override
@@ -48,7 +48,12 @@ class _MyAppState extends State<MyApp> {
       identifier: 'SEND_ACTION',
       behavior: 'textInput'
     );
+    NotificationAction viewAction = NotificationAction(
+      title: 'View Report',
+      identifier: 'VIEW_ACTION'
+    );
     sendActions.add(sendAction);
+    sendActions.add(viewAction);
     NotificationCategory assignmentCategory = NotificationCategory('ASSIGNMENT_REPORT', actions);
     NotificationCategory sendCategory = NotificationCategory('SEND_REPORT', sendActions);
     _flutterPushNotifications.registerNotificationCategory([assignmentCategory, sendCategory]);
@@ -66,9 +71,13 @@ class _MyAppState extends State<MyApp> {
         _message = textMessage;
       });
     });
-    _flutterPushNotifications.onActionClicked.listen((action) {
+    _flutterPushNotifications.onActionClicked.listen((actionData) {
       setState(() {
-        _action = action;
+        String resultData = "";
+        actionData.forEach((key, value) {
+          resultData += '$key : $value\n';
+        });
+        _actionData = resultData;
       });
     });
     _flutterPushNotifications.requestNotificationPermissions();
@@ -92,7 +101,7 @@ class _MyAppState extends State<MyApp> {
                 child: Column(
                   children: <Widget>[
                     Text(_message),
-                    Text(_action),
+                    Text(_actionData),
                 ],)
               ),
             ],

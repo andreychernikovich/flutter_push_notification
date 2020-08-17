@@ -11,10 +11,12 @@
   FlutterMethodChannel *_channel;
   NSDictionary *_launchNotification;
   BOOL _resumingFromBackground;
+  NSArray *_notificationCategories;
 }
 
 - (void)registerForNotification: (NSArray *)categories NS_AVAILABLE_IOS(9.0) {
     NSMutableArray *notificationCotigories = [[NSMutableArray alloc] init];
+    _notificationCategories = categories;
     for (NSDictionary* category in categories) {
         NSString *categoryIdentifier = category[@"identifier"];
         NSMutableArray *actions = [[NSMutableArray alloc] init];
@@ -149,17 +151,36 @@
       NSString *categoryIdentifier = response.notification.request.content.categoryIdentifier;
       // Check to key to ensure we only handle messages from Firebase
       dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-      dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+      dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
           if (userInfo[@"gcm.message_id"]) {
-            if ([categoryIdentifier isEqualToString:NotificationCategoryIdent]) {
-              [_channel invokeMethod:@"onActionClicked" arguments:response.actionIdentifier];
-            } else if ([categoryIdentifier isEqualToString:NotificationCategorySendIdent]) {
-              [_channel invokeMethod:@"onActionClicked" arguments: ((UNTextInputNotificationResponse*)response).userText];
-            } else {
-              [_channel invokeMethod:@"onResume" arguments:userInfo];
+            for (NSDictionary* category in _notificationCategories) {
+              if ([categoryIdentifier isEqualToString:category[@"identifier"]]) {
+                for (NSDictionary *action in category[@"actions"]) {
+                  if ([response.actionIdentifier isEqualToString:action[@"identifier"]]) {
+                    NSDictionary *actionObject;
+                    if ([action[@"behavior"] isEqual:@"default"]) {
+                      actionObject = @{
+                          @"actionIdentifier": action[@"identifier"],
+                          @"data": userInfo[@"data"],
+                          @"userInput": @"nil"
+                      };
+                      [_channel invokeMethod:@"onActionClicked" arguments:actionObject];
+                    } else {
+                      actionObject = @{
+                        @"actionIdentifier": action[@"identifier"],
+                        @"data": userInfo[@"data"],
+                        @"userInput": ((UNTextInputNotificationResponse*)response).userText
+                      };
+                      [_channel invokeMethod:@"onActionClicked" arguments:actionObject];
+                    }
+                  }
+                }
+              }
             }
-            completionHandler();
+          } else {
+            [_channel invokeMethod:@"onResume" arguments:userInfo];
           }
+          completionHandler();
       });
     }
 

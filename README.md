@@ -83,11 +83,74 @@ For get data from clicked notification action use:
 
 example sending data from firebase:
 ```shell
-"data": {
+{ 
+  "notification": {
     "title": "Työvuorosi on päättynyt",
-    "body": "15.1. 8:00 - 16:00 Some great assignment",
-    "route": "/assignments/123456",
-    "collapseKey": "ASSIGNMENT_REPORT",
-    "actions": ["CONFIRM_ALL", "SHOW_ASSIGNMENTS"]
+    "text": "15.1. 8:00 - 16:00 Some great assignment",
+    "click_action":"NOTIFICATION_CATEGORY"
+  },
+	"to" : "DEVICE_TOKEN",
+  "data": {
+    "data": {
+      "route": "/assignments/123456"
+    }
+  }
 }
+```
+
+Each NOTIFICATION_CATEGORY associated with the list of NotificationAction.
+
+NotificationAction class allows you to set visible title of action, behavior and activation mode.
+By default push notification will activate the app and action will have "clickable" behavior.
+The "behavior" can be "default" which means action will have just "clickable" behavior and also can be "textInput" which means action will be presented as text input.
+The "activationMode" can be "foreground" and "background". "Foreground" activation mode will open the app and you can process the data in the app. "Background" activation mode allows you to process the data in the background.
+```dart
+class NotificationAction {
+  String title;
+  String identifier;
+  /// foreground, background
+  String activationMode;
+  /// default, textInput
+  String behavior;
+
+  ...
+}
+```
+
+NotificationCategory class accepts identifier and list of actions which are associated with this category:
+```dart
+class NotificationCategory {
+  String identifier;
+  List<NotificationAction> actions;
+
+  ...
+}
+```
+
+Example of creating categories with the list of actions:
+```dart
+List<NotificationAction> viewActions = List<NotificationAction>();
+NotificationAction action1 = NotificationAction(
+  title: 'First title',
+  identifier: 'FIRST_ACTION'
+);
+viewActions.add(action1);
+NotificationAction action2 = NotificationAction(
+    title: 'Second title',
+    identifier: 'SECOND_ACTION'
+);
+viewActions.add(action2);
+NotificationCategory firstCategory = NotificationCategory('FIRST_CATEGORY', viewActions);
+List<NotificationAction> sendActions = List<NotificationAction>();
+NotificationAction sendAction = NotificationAction(
+  title: 'Text input action',
+  identifier: 'TEXT_INPUT_ACTION',
+  behavior: 'textInput'
+);
+sendActions.add(sendAction)
+NotificationCategory secondCategory = NotificationCategory('SECOND_CATEGORY', sendActions);
+```
+Finally you should register your categories:
+```dart
+_flutterPushNotifications.registerNotificationCategory([firstCategory, secondCategory]);
 ```
